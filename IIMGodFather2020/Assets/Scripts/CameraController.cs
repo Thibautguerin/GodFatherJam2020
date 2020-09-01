@@ -9,10 +9,12 @@ public class CameraController : MonoBehaviour
     public float speedFollow;
 
     [Header("Zoom")]
-    public float speedZoom;
+    public float gapOnZoom;
+    public float speedTransitionZoom;
     public float limitMinZoom;
     public float limitMaxZoom;
     private Vector3 _basePosition;
+    private Vector3 _actualMovementPosition;
 
     private Camera _camera;
 
@@ -24,7 +26,13 @@ public class CameraController : MonoBehaviour
         _camera = GetComponent<Camera>();
         _basePosition = transform.position;
     }
-    
+
+    private void Update()
+    {
+        //Smooth movement on wheel
+        transform.position = Vector3.Lerp(transform.position, _actualMovementPosition, speedTransitionZoom*Time.deltaTime);
+    }
+
     /// <summary>
     /// Zoom action is to make a zoom to your player
     /// true is to zoom in and false is to zoom out
@@ -33,13 +41,14 @@ public class CameraController : MonoBehaviour
     {
         if (ZoomIn)
         {
-            _camera.orthographicSize += speedZoom * Time.deltaTime;
+            _camera.orthographicSize += gapOnZoom * Time.deltaTime;
         }
         else
         {
-            _camera.orthographicSize -= speedZoom * Time.deltaTime;
+            _camera.orthographicSize -= gapOnZoom * Time.deltaTime;
         }
         _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, limitMinZoom, limitMaxZoom);
-        transform.position = Vector3.Lerp(GameController.instance.player.transform.position, _basePosition, (_camera.orthographicSize - limitMinZoom) / (limitMaxZoom - limitMinZoom));
+
+        _actualMovementPosition = Vector3.Lerp(GameController.instance.player.transform.position, _basePosition, (_camera.orthographicSize - limitMinZoom) / (limitMaxZoom - limitMinZoom));
     }
 }
