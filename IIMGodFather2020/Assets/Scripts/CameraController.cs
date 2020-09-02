@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public static CameraController instance;
+    public static CameraController instance = null;
     
-    public float speedFollow;
+    public float speedFollow = 1;
 
     [Header("Zoom")]
-    public float gapOnZoom;
-    public float speedTransitionZoom;
-    public float limitMinZoom;
-    public float limitMaxZoom;
-    private Vector3 _basePosition;
-    private Vector3 _actualMovementPosition;
+    public float gapOnZoom = 1;
+    public float speedTransitionZoom = 1;
+    public float limitMinZoom = 1;
+    public float limitMaxZoom = 1;
+    private Vector3 _basePosition = Vector3.zero;
+    private Vector3 _actualMovementPosition = Vector3.zero;
 
     [Header("Follow")]
-    public float speedTransitionMovement;
+    public Vector2 viewportLimit = new Vector2(0.2f, 0.2f);
+    public float speedTransitionMovement = 1;
+    private float _currentSpeedTransitionMovement = 0;
 
-    private Camera _camera;
+    private Camera _camera = null;
 
     private void Awake()
     {
@@ -30,15 +32,26 @@ public class CameraController : MonoBehaviour
         _basePosition = transform.position;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         //Smooth movement on wheel
         float percent = (_camera.orthographicSize -limitMinZoom) / (limitMaxZoom - limitMinZoom);
-        _actualMovementPosition = Vector3.Lerp(GameController.instance.player.GetEndPositionMovement(), _basePosition, percent);
+        _actualMovementPosition = Vector2.Lerp(transform.position, _basePosition, percent*Time.deltaTime);
+
+        //Player on viewport
+        Vector2 PlayerOnScreen = Camera.main.WorldToViewportPoint(GameController.instance.player.transform.position);
+        if (PlayerOnScreen.x < viewportLimit.x || PlayerOnScreen.y < viewportLimit.y || PlayerOnScreen.x > 1 - viewportLimit.x || PlayerOnScreen.y > 1 - viewportLimit.y)
+        {
+            _currentSpeedTransitionMovement = GameController.instance.player.speedMovement;
+        }
+        else
+        {
+            _currentSpeedTransitionMovement = speedTransitionMovement;
+        }
 
         //Change position of camera
-        transform.position = Vector3.Lerp(transform.position, _actualMovementPosition, speedTransitionZoom * Time.deltaTime* (1 - percent));
-        transform.position = Vector3.Lerp(transform.position, GameController.instance.player.GetEndPositionMovement(), speedTransitionMovement * Time.deltaTime* (1 - percent));
+        //transform.position = _actualMovementPosition;
+        transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
     }
 
     /// <summary>

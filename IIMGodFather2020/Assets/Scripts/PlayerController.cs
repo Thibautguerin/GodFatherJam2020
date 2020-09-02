@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speedMovement;
-    private Vector3 _positionOnMovement;
+    public float speedMovement = 0;
+    private Vector3 _positionOnMovement = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +40,8 @@ public class PlayerController : MonoBehaviour
 
             _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
         }
-        transform.position = Vector2.Lerp(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+        //transform.position = Vector2.Lerp(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
 
     }
 
