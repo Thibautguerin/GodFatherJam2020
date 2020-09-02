@@ -481,14 +481,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: 24.848396, y: 24.665972}
-  - {x: 35.619625, y: -2.436056}
-  - {x: 16.5351, y: -29.16685}
-  - {x: -14.5757885, y: -31.450739}
-  - {x: -32.516163, y: -9.840832}
-  - {x: -33.752693, y: 10.407264}
-  - {x: -20.246542, y: 29.188831}
-  - {x: 0.57993984, y: 34.676315}
+  - {x: 4.0343027, y: -22.827375}
+  - {x: -3.7338195, y: -23.189089}
+  - {x: -21.36219, y: -17.22994}
+  - {x: -27.158741, y: 0.050905704}
+  - {x: -25.933437, y: 19.07791}
+  - {x: -23.901545, y: 36.27523}
+  - {x: -0.5465369, y: 46.053566}
+  - {x: 25.206625, y: 39.28866}
+  - {x: 32.94843, y: 13.460576}
+  - {x: 17.990906, y: -10.913118}
 --- !u!114 &679895770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,9 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cee6e71558ad194aa9ec9171c0e49c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delimitationOfTheMap: []
+  geometry2D: {fileID: 679895769}
   centerOfTheMap: {fileID: 0}
-  positionPlayer: {x: -14.5, y: 20.9}
 --- !u!4 &679895771
 Transform:
   m_ObjectHideFlags: 0
