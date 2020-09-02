@@ -9,9 +9,43 @@ public class GameController : MonoBehaviour
     public PlayerController player;
     public GameObject tree;
 
+    // Canvas de Défaite
+    public Canvas defeatCanvas;
+    public Canvas victoryCanvas;
+
+    // Timer
+    public float timer;
+    public bool isPlaying = false;
+
+
+    
     private void Awake()
     {
         if (!instance) instance = this;
         else if (instance != this) Destroy(gameObject);
+    }
+
+    private void Update()
+    {
+        if (timer > 0 && isPlaying)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if (timer <= 0)
+        {
+            victoryCanvas.gameObject.SetActive(true);
+        }
+    }
+
+    public void Attack()
+    {
+        isPlaying = true;
+    }
+
+    public void Defeat()
+    {
+        Time.timeScale = 0;
+        defeatCanvas.gameObject.SetActive(true);
     }
 }
