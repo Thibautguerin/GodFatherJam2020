@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleMovementEnemy : EnemyBehaviour
+public class LumberjackEnemy : EnemyBehaviour
 {
     private bool _sens = false;
     private bool _isAttack = false;
 
     private void FixedUpdate()
     {
-        if(!_isAttack)
-            transform.position += new Vector3(_sens?-speedMovement: speedMovement, 0,0) * Time.deltaTime;                                                                                                                                                         
+        if (!_isAttack)
+            transform.position += new Vector3(_sens ? -speedMovement : speedMovement, 0, 0) * Time.deltaTime;
     }
 
     public override void Init()
@@ -41,7 +41,7 @@ public class SimpleMovementEnemy : EnemyBehaviour
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Tree")
+        if (collision.tag == "Tree")
         {
             _isAttack = true;
             Attack();

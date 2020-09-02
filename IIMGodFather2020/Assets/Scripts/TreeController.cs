@@ -11,6 +11,7 @@ public class TreeController : MonoBehaviour
     private void Start()
     {
         currentHealth = maxTreeHealth;
+        GameController.instance.tree = this;
     }
 
 

@@ -8,18 +8,37 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     [Header("Attack")]
     public float attackRate;
-    public float attackDommage;
+    public int attackDommage;
+
+    private void Start()
+    {
+        GameController.instance.enemyList.Add(this);
+        Init();
+    }
 
     public virtual void Init()
     {
 
     }
 
-    public abstract void Attack();
+    public virtual void Attack()
+    {
+        StartCoroutine(AttackAction());
+    }
+
+    private IEnumerator AttackAction()
+    {
+        yield return new WaitForSeconds(attackRate);
+        GameController.instance.tree?.TakeDamage(attackDommage);
+        StartCoroutine(AttackAction());
+    }
 
     public abstract void Movement();
 
-    public abstract void Die();
+    public virtual void Die()
+    {
+        GameController.instance.enemyList.Remove(this);
+    }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {

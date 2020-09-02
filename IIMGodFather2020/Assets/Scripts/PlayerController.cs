@@ -19,13 +19,13 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _areaAirAttack = GetComponentInChildren<CircleCollider2D>();
         _areaAirAttack.enabled = false;
-        ApplyStats();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         GameController.instance.player = this;
+        ApplyStats();
     }
 
     // Update is called once per frame
@@ -98,9 +98,7 @@ public class PlayerController : MonoBehaviour
         CameraController.instance.ZoomAction(newStat.zoomPower);
         display.color = newStat.color;
     }
-
-    [System.Obsolete("Need to be modify")]
-    //TODO
+    
     public IEnumerator AirAttack()
     {
         _areaAirAttack.enabled = true;

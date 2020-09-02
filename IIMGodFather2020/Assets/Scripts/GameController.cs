@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public PlayerController player;
-    public GameObject tree;
+    public TreeController tree;
 
     // Canvas de Défaite
     public Canvas defeatCanvas;
@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     public float timer = 100;
     public bool isPlaying = false;
 
+    public List<EnemyBehaviour> enemyList = new List<EnemyBehaviour>();
 
     
     [Header("Map")]
