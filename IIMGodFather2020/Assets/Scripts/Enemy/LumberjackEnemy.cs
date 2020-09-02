@@ -16,6 +16,7 @@ public class LumberjackEnemy : EnemyBehaviour
     public override void Init()
     {
         base.Init();
+        _isAttack = false;
         if (GameController.instance.tree.transform.position.x < transform.position.x)
         {
             _sens = true;

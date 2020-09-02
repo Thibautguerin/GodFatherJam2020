@@ -12,8 +12,8 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        GameController.instance.enemyList.Add(this);
-        Init();
+        GameController.instance.enemyController.enemyList.Add(this);
+        //Init();
     }
 
     public virtual void Init()
@@ -37,7 +37,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     public virtual void Die()
     {
-        GameController.instance.enemyList.Remove(this);
+        GameController.instance.enemyController.enemyList.Remove(this);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)

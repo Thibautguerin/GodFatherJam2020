@@ -6,8 +6,10 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
 
+    [Header("Controllers")]
     public PlayerController player;
     public TreeController tree;
+    public EnemyController enemyController;
 
     // Canvas de Défaite
     public Canvas defeatCanvas;
@@ -17,7 +19,6 @@ public class GameController : MonoBehaviour
     public float timer = 100;
     public bool isPlaying = false;
 
-    public List<EnemyBehaviour> enemyList = new List<EnemyBehaviour>();
 
     
     [Header("Map")]
