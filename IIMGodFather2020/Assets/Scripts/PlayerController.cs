@@ -38,11 +38,13 @@ public class PlayerController : MonoBehaviour
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = Camera.main.nearClipPlane;
 
-            _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
+            if (MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
+            {
+                _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
+            }
         }
+        
         transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
-        //transform.position = Vector2.Lerp(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
-
     }
 
     /// <summary>

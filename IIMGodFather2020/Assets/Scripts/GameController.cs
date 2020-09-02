@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour
 
 
     
+    [Header("Map")]
+    public float radiusLimitMap = 10;
+
     private void Awake()
     {
         if (!instance) instance = this;
