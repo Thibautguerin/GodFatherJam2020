@@ -36,7 +36,6 @@ public class CameraController : MonoBehaviour
     {
         //Smooth movement on wheel
         float percent = (_camera.orthographicSize -limitMinZoom) / (limitMaxZoom - limitMinZoom);
-        _actualMovementPosition = Vector2.Lerp(transform.position, _basePosition, percent*Time.deltaTime);
 
         //Player on viewport
         Vector2 PlayerOnScreen = Camera.main.WorldToViewportPoint(GameController.instance.player.transform.position);
@@ -50,7 +49,6 @@ public class CameraController : MonoBehaviour
         }
 
         //Change position of camera
-        //transform.position = _actualMovementPosition;
         transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
     }
 
