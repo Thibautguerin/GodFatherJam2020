@@ -32,17 +32,16 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //Movement on click
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = Camera.main.nearClipPlane;
+        //Movement with mouse position
+        
+         Vector3 mousePos = Input.mousePosition;
+         mousePos.z = Camera.main.nearClipPlane;
 
-            if (MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
-            {
-                _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
-            }
-        }
+         if (MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
+         {
+            _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
+         }
+        
         
         transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
     }
