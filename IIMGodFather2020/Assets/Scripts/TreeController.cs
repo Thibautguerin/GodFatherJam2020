@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class TreeController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Vie")]
+    public int maxTreeHealth = 100;
+    public int currentHealth;
+
+    private void Start()
     {
-        
+        currentHealth = maxTreeHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void RestoreLife(int lifeUp)
     {
-        
+        currentHealth += lifeUp;
+        if (currentHealth >= maxTreeHealth)
+        {
+            currentHealth = maxTreeHealth;
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        GameController.instance.Defeat();
+        Destroy(gameObject);
     }
 }
