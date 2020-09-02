@@ -10,11 +10,14 @@ public class CameraController : MonoBehaviour
 
     [Header("Zoom")]
     public float gapOnZoom = 1;
+    public float speedZoom = 1;
+
     public float speedTransitionZoom = 1;
     public float limitMinZoom = 1;
     public float limitMaxZoom = 1;
     private Vector3 _basePosition = Vector3.zero;
     private Vector3 _actualMovementPosition = Vector3.zero;
+    private float _finalZoom = 1;
 
     [Header("Follow")]
     public Vector2 viewportLimit = new Vector2(0.2f, 0.2f);
@@ -30,6 +33,7 @@ public class CameraController : MonoBehaviour
 
         _camera = GetComponent<Camera>();
         _basePosition = transform.position;
+        _finalZoom = limitMinZoom;
     }
 
     private void LateUpdate()
@@ -50,6 +54,9 @@ public class CameraController : MonoBehaviour
 
         //Change position of camera
         transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
+
+        //Smooth zoom
+        _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _finalZoom, speedZoom*Time.deltaTime);
     }
 
     /// <summary>
@@ -60,12 +67,13 @@ public class CameraController : MonoBehaviour
     {
         if (ZoomIn)
         {
-            _camera.orthographicSize += gapOnZoom * Time.deltaTime;
+            _finalZoom += gapOnZoom * Time.deltaTime;
         }
         else
         {
-            _camera.orthographicSize -= gapOnZoom * Time.deltaTime;
+            _finalZoom -= gapOnZoom * Time.deltaTime;
         }
-        _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, limitMinZoom, limitMaxZoom);
+
+        _finalZoom = Mathf.Clamp(_finalZoom, limitMinZoom, limitMaxZoom);
     }
 }
