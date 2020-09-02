@@ -16,6 +16,9 @@ public class CameraController : MonoBehaviour
     private Vector3 _basePosition;
     private Vector3 _actualMovementPosition;
 
+    [Header("Follow")]
+    public float speedTransitionMovement;
+
     private Camera _camera;
 
     private void Awake()
@@ -30,7 +33,12 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
         //Smooth movement on wheel
-        transform.position = Vector3.Lerp(transform.position, _actualMovementPosition, speedTransitionZoom*Time.deltaTime);
+        float percent = (_camera.orthographicSize -limitMinZoom) / (limitMaxZoom - limitMinZoom);
+        _actualMovementPosition = Vector3.Lerp(GameController.instance.player.GetEndPositionMovement(), _basePosition, percent);
+
+        //Change position of camera
+        transform.position = Vector3.Lerp(transform.position, _actualMovementPosition, speedTransitionZoom * Time.deltaTime* (1 - percent));
+        transform.position = Vector3.Lerp(transform.position, GameController.instance.player.GetEndPositionMovement(), speedTransitionMovement * Time.deltaTime* (1 - percent));
     }
 
     /// <summary>
@@ -48,7 +56,5 @@ public class CameraController : MonoBehaviour
             _camera.orthographicSize -= gapOnZoom * Time.deltaTime;
         }
         _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, limitMinZoom, limitMaxZoom);
-
-        _actualMovementPosition = Vector3.Lerp(GameController.instance.player.transform.position, _basePosition, (_camera.orthographicSize - limitMinZoom) / (limitMaxZoom - limitMinZoom));
     }
 }

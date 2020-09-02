@@ -220,9 +220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedFollow: 10
-  speedZoom: 100
-  limitMinZoom: 0.5
+  gapOnZoom: 100
+  speedTransitionZoom: 2
+  limitMinZoom: 5
   limitMaxZoom: 10
+  speedTransitionMovement: 1
 --- !u!1 &182003079
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d607847da874b0449acd7c6e7380097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedMovement: 1
 --- !u!1 &647095561
 GameObject:
   m_ObjectHideFlags: 0
