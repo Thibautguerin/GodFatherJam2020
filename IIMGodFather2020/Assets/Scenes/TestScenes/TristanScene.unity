@@ -372,6 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTreeHealth: 100
   currentHealth: 0
+  healthPoints: []
 --- !u!1 &647095561
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 1332101093663019451, guid: 81c0fcd1da47e94468ddee3961c6f2bf, type: 3}
       propertyPath: m_Name
       value: Fire Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332101093663019451, guid: 81c0fcd1da47e94468ddee3961c6f2bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1332101093663019453, guid: 81c0fcd1da47e94468ddee3961c6f2bf, type: 3}
       propertyPath: m_Enabled

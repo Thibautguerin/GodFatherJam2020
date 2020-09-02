@@ -36,22 +36,42 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        //Smooth movement on wheel
-        float percent = (_camera.orthographicSize -limitMinZoom) / (limitMaxZoom - limitMinZoom);
-
-        //Player on viewport
+        ////Player on viewport
         Vector2 PlayerOnScreen = Camera.main.WorldToViewportPoint(GameController.instance.player.transform.position);
         if (PlayerOnScreen.x < viewportLimit.x || PlayerOnScreen.y < viewportLimit.y || PlayerOnScreen.x > 1 - viewportLimit.x || PlayerOnScreen.y > 1 - viewportLimit.y)
         {
-            _currentSpeedTransitionMovement = GameController.instance.player.speedMovement;
+            if (PlayerOnScreen.x < 0.1f || PlayerOnScreen.y < 0.1f || PlayerOnScreen.x > 1 - 0.1f || PlayerOnScreen.y > 1 - 0.1f)
+            {
+                _currentSpeedTransitionMovement = 0;
+            }
+            else
+            {
+                if (GameController.instance.player.GetVelocity() != Vector2.zero)
+                {
+                    _currentSpeedTransitionMovement = GameController.instance.player.GetVelocity().magnitude;
+                }
+                else
+                {
+                    _currentSpeedTransitionMovement = GameController.instance.player.speedMovement;
+                }
+            }
         }
         else
         {
             _currentSpeedTransitionMovement = speedTransitionMovement;
         }
 
-        //Change position of camera
-        transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
+
+        if (GameController.instance.player.GetVelocity() != Vector2.zero)
+        {
+            //Change position of camera
+            transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetVelocity(), _currentSpeedTransitionMovement * Time.deltaTime);
+        }
+        else
+        {
+            //Change position of camera
+            transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
+        }
 
         //Smooth zoom
         _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _finalZoom, speedZoom*Time.deltaTime);

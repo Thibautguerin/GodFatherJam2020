@@ -41,7 +41,6 @@ public class MapController : MonoBehaviour
 
             if ((X/Y < 1 && X/Y > 0) && X1 / Y1 < 1 && X1 / Y1 > 0)
             {
-                Debug.Log(X/Y+"  Stop   "+X1/Y1);
                 return false;
             }
         }

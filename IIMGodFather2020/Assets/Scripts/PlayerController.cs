@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         _currentStat++;
         if (_currentStat >= changementStats.Length)
         {
-            _currentStat = 0;
+            _currentStat = changementStats.Length - 1;
         }
         ApplyStats();
     }
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
         _currentStat--;
         if (_currentStat < 0)
         {
-            _currentStat = changementStats.Length-1;
+            _currentStat = 0;
         }
         ApplyStats();
     }
@@ -106,7 +106,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
         if (collision.GetComponent<EnemyBehaviour>())
         {
             collision.GetComponent<EnemyBehaviour>().Die();
@@ -120,6 +119,11 @@ public class PlayerController : MonoBehaviour
     public Vector3 GetEndPositionMovement()
     {
         return _positionOnMovement;
+    }
+
+    public Vector2 GetVelocity()
+    {
+        return _rb.velocity;
     }
 }
 
