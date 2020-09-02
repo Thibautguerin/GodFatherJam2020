@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedFollow: 10
   gapOnZoom: 100
+  speedZoom: 3
   speedTransitionZoom: 3
   limitMinZoom: 10
   limitMaxZoom: 20
@@ -434,6 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  tree: {fileID: 0}
 --- !u!4 &647095563
 Transform:
   m_ObjectHideFlags: 0
