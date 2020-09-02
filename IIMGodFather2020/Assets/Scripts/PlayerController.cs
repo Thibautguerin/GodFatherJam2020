@@ -45,8 +45,6 @@ public class PlayerController : MonoBehaviour
         }
         
         transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
-        //transform.position = Vector2.Lerp(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
-
     }
 
     /// <summary>

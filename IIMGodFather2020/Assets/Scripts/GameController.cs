@@ -18,11 +18,5 @@ public class GameController : MonoBehaviour
         else if (instance != this) Destroy(gameObject);
     }
 
-    private void OnDrawGizmos()
-    {
-        if (!tree)
-            return;
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(tree.transform.position, radiusLimitMap);
-    }
+
 }
