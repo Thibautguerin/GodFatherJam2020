@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     public Canvas victoryCanvas;
 
     // Timer
-    public float timer;
+    public float timer = 100;
     public bool isPlaying = false;
 
 

@@ -74,4 +74,14 @@ public class CameraController : MonoBehaviour
 
         _finalZoom = Mathf.Clamp(_finalZoom, limitMinZoom, limitMaxZoom);
     }
+
+    /// <summary>
+    /// Zoom action is to make a zoom to your player
+    /// This version is to select a particular strenght
+    /// </summary>
+    public void ZoomAction(float Strenght)
+    {
+        _finalZoom = Strenght;
+        _finalZoom = Mathf.Clamp(_finalZoom, limitMinZoom, limitMaxZoom);
+    }
 }

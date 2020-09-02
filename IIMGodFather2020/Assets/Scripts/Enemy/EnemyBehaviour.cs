@@ -19,7 +19,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     public abstract void Movement();
 
-    public abstract void Mort();
+    public abstract void Die();
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
