@@ -5,8 +5,6 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public static CameraController instance = null;
-    
-    public float speedFollow = 1;
 
     [Header("Zoom")]
     public float gapOnZoom = 1;
