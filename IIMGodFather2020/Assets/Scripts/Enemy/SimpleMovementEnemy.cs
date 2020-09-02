@@ -10,7 +10,7 @@ public class SimpleMovementEnemy : EnemyBehaviour
     private void FixedUpdate()
     {
         if(!_isAttack)
-            transform.position += new Vector3(speedMovement,0,0) * Time.deltaTime;                                                                                                                                                         
+            transform.position += new Vector3(_sens?speedMovement:-speedMovement, 0,0) * Time.deltaTime;                                                                                                                                                         
     }
 
     public override void Init()
