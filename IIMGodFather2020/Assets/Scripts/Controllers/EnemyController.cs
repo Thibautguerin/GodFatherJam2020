@@ -7,9 +7,14 @@ public class EnemyController : MonoBehaviour
     public List<EnemyBehaviour> enemyList = new List<EnemyBehaviour>();
     public EnemyBehaviour[] enemyPrefabs;
 
-    public GameObject[] spawnLaderjackPlacement;
-    public GameObject[] spawnSpiritsPlacement;
-    public GameObject[] spawnFirePlacement;
+    public GameObject spawnParentLaderjackPlacement;
+    private GameObject[] spawnLaderjackPlacement;
+
+    public GameObject spawnParentSpiritsPlacement;
+    private GameObject[] spawnSpiritsPlacement;
+
+    public GameObject spawnParentFirePlacement;
+    private GameObject[] _spawnFirePlacement;
 
     public float minTimeSpawn = 10;
     public float maxTimeSpawn = 70;
@@ -20,6 +25,23 @@ public class EnemyController : MonoBehaviour
     {
         GameController.instance.enemyController = this;
         _selectedTimeSpawn = Random.Range(minTimeSpawn, maxTimeSpawn);
+
+        spawnLaderjackPlacement = new GameObject[spawnParentLaderjackPlacement.transform.childCount];
+        for (int i = 0; i < spawnParentLaderjackPlacement.transform.childCount; i++)
+        {
+            spawnLaderjackPlacement[i] = spawnParentLaderjackPlacement.transform.GetChild(i).gameObject;
+        }
+        spawnSpiritsPlacement = new GameObject[spawnParentSpiritsPlacement.transform.childCount];
+        for (int i = 0; i < spawnParentSpiritsPlacement.transform.childCount; i++)
+        {
+            spawnSpiritsPlacement[i] = spawnParentSpiritsPlacement.transform.GetChild(i).gameObject;
+        }
+        _spawnFirePlacement = new GameObject[spawnParentFirePlacement.transform.childCount];
+        for (int i = 0; i < spawnParentFirePlacement.transform.childCount; i++)
+        {
+            _spawnFirePlacement[i] = spawnParentFirePlacement.transform.GetChild(i).gameObject;
+        }
+
     }
 
     private void Update()
@@ -40,20 +62,20 @@ public class EnemyController : MonoBehaviour
         switch (rand)
         {
             case 0:
-                SpawnEnemy(0);
+                SpawnEnemy(0, spawnSpiritsPlacement);
                 break;
             case 1:
-                SpawnEnemy(1);
+                SpawnEnemy(1, spawnLaderjackPlacement);
                 break;
             case 2:
-                SpawnEnemy(2);
+                SpawnEnemy(2, _spawnFirePlacement);
                 break;
         }
     }
-    public void SpawnEnemy(int index)
+    public void SpawnEnemy(int index, GameObject[] placements)
     {
         EnemyBehaviour enemy = Instantiate(enemyPrefabs[index]);
-        enemy.transform.position = GetRandomPlacement(spawnSpiritsPlacement).transform.position;
+        enemy.transform.position = GetRandomPlacement(placements).transform.position;
         enemy.Init();
     }
 
