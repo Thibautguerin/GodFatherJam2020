@@ -28,9 +28,6 @@ public class EnemyController : MonoBehaviour
     public float minLumberjackTimeSpawn = 10;
     public float maxLumberjackTimeSpawn = 70;
 
-    private float _timeSpawn = 0;
-    private float _selectedTimeSpawn = 0;
-
     private void Start()
     {
         GameController.instance.enemyController = this;
