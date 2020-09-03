@@ -102,22 +102,23 @@ public class CameraController : MonoBehaviour
             _currentSpeedTransitionMovement = speedTransitionMovement;
         }
 
-
+        Vector3 NewPosCam = Vector3.zero;
         //Use gravity or not
         if (GameController.instance.player.GetVelocity() != Vector2.zero)
         {
             //Change position of camera
-            transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetVelocity(), _currentSpeedTransitionMovement * Time.deltaTime);
-            transform.position = ClampPositionToScreen(transform.position);
+            NewPosCam = Vector2.MoveTowards(transform.position, GameController.instance.player.GetVelocity(), _currentSpeedTransitionMovement * Time.deltaTime);
+            NewPosCam = ClampPositionToScreen(NewPosCam);
         }
         else
         {
             //Change position of camera
-            transform.position = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
-            transform.position = ClampPositionToScreen(transform.position);
+            NewPosCam = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
+            NewPosCam = ClampPositionToScreen(NewPosCam);
 
         }
-
+        NewPosCam = new Vector3(NewPosCam.x, NewPosCam.y, -10);
+        transform.position = NewPosCam;
         //Smooth zoom
         _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _finalZoom, speedZoom*Time.deltaTime);
     }
