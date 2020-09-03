@@ -341,7 +341,7 @@ Transform:
   m_LocalScale: {x: 5.3910475, y: 47.357506, z: 5.3910475}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &182003082
 BoxCollider2D:
@@ -497,10 +497,11 @@ MonoBehaviour:
   player: {fileID: 0}
   tree: {fileID: 0}
   enemyController: {fileID: 0}
-  defeatCanvas: {fileID: 0}
-  victoryCanvas: {fileID: 0}
+  defeatPanel: {fileID: 0}
+  victoryPanel: {fileID: 0}
   timer: 1000
   isPlaying: 0
+  pausePanel: {fileID: 0}
   radiusLimitMap: 33.96
 --- !u!4 &647095563
 Transform:
@@ -509,12 +510,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647095561}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6404319, y: 4.905185, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1430338046}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679895768
 GameObject:
@@ -583,7 +584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &756688140 stripped
 GameObject:
@@ -817,14 +818,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430338044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6404319, y: -4.905185, z: -21.78984}
+  m_LocalPosition: {x: -0.6404319, y: -4.905185, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1298386307}
   - {fileID: 884890195}
   - {fileID: 54542659}
+  - {fileID: 647095563}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1481691369
 GameObject:
@@ -893,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1332101093663019448, guid: 81c0fcd1da47e94468ddee3961c6f2bf, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1332101093663019448, guid: 81c0fcd1da47e94468ddee3961c6f2bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
