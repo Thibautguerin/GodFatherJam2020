@@ -33,7 +33,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(attackRate);
         GameController.instance.tree?.TakeDamage(attackDommage);
-        StartCoroutine(AttackAction());
+        Attack();
     }
 
     public abstract void Movement();

@@ -36,6 +36,7 @@ public class LumberjackEnemy : EnemyBehaviour
         {
             base.Die(collide, trigger);
             StopAllCoroutines();
+            SoundEffectsController.instance.MakeLumberjackDeathSound();
             Destroy(gameObject);
         }
     }
@@ -58,6 +59,7 @@ public class LumberjackEnemy : EnemyBehaviour
     {
         base.Attack();
         animator.SetBool("Attack", true);
+        SoundEffectsController.instance.MakeLumberjackAttackSound();
 
     }
     

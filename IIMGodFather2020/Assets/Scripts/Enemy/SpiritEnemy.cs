@@ -36,6 +36,7 @@ public class SpiritEnemy : EnemyBehaviour
         {
             base.Die(collide, trigger);
             StopAllCoroutines();
+            SoundEffectsController.instance.MakeBadSpiritDeathSound();
             Destroy(gameObject);
         }
     }
@@ -52,6 +53,12 @@ public class SpiritEnemy : EnemyBehaviour
             _isAttack = true;
             Attack();
         }
+    }
+
+    public override void Attack()
+    {
+        base.Attack();
+        SoundEffectsController.instance.MakeBadSpiritAttackSound();
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)

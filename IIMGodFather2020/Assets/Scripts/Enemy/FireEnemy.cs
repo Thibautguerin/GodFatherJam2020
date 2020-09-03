@@ -24,6 +24,7 @@ public class FireEnemy : EnemyBehaviour
             base.Die(collide, trigger);
             StopAllCoroutines();
             Destroy(gameObject);
+            SoundEffectsController.instance.MakeFireOffSound();
         }
     }
 
