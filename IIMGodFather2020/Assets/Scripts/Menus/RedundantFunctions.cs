@@ -17,7 +17,7 @@ public class RedundantFunctions : MonoBehaviour
 
     public void RetryGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 }
