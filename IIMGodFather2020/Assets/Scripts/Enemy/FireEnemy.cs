@@ -17,11 +17,11 @@ public class FireEnemy : EnemyBehaviour
         StartCoroutine(Duplicate());
     }
 
-    public override void Die(PlayerController collide)
+    public override void Die(PlayerController collide, bool trigger)
     {
-        if (collide.GetGravity() == 0)
+        if (collide.GetGravity() == 0 && trigger)
         {
-            base.Die(collide);
+            base.Die(collide, trigger);
             StopAllCoroutines();
             Destroy(gameObject);
         }
@@ -48,5 +48,13 @@ public class FireEnemy : EnemyBehaviour
         limitSpawn -= 1;
         newEnemy.limitSpawn = limitSpawn;
         StartCoroutine(Duplicate());
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Attack")
+        {
+            Die(GameController.instance.player, true);
+        }
     }
 }

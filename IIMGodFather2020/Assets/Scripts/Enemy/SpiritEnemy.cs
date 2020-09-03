@@ -26,11 +26,11 @@ public class SpiritEnemy : EnemyBehaviour
         }
     }
 
-    public override void Die(PlayerController collide)
+    public override void Die(PlayerController collide, bool trigger)
     {
         if (collide.GetGravity() > 0)
         {
-            base.Die(collide);
+            base.Die(collide, trigger);
             StopAllCoroutines();
             Destroy(gameObject);
         }
@@ -50,4 +50,25 @@ public class SpiritEnemy : EnemyBehaviour
         }
     }
 
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (GameController.instance.player.GetBiggerAttack())
+            {
+                Die(GameController.instance.player, false);
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (GameController.instance.player.GetBiggerAttack())
+            {
+                Die(GameController.instance.player, false);
+            }
+        }
+    }
 }

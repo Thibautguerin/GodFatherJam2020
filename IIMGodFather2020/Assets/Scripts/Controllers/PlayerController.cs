@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     private int _currentStat = 0;
     private CircleCollider2D _areaAirAttack = null;
 
+    private bool _biggerAttack = false;
+    public float timerBigAttack = 0.5f;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -77,6 +80,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StartCoroutine(BiggerAttack());
             ApplyStats();
         }
     }
@@ -110,21 +114,17 @@ public class PlayerController : MonoBehaviour
         _areaAirAttack.enabled = false;
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public IEnumerator BiggerAttack()
     {
-        if (collision.GetComponent<EnemyBehaviour>())
-        {
-            collision.GetComponent<EnemyBehaviour>().Die(this);
-        }
-    }
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<EnemyBehaviour>() && _rb.gravityScale > 0)
-        {
-            collision.gameObject.GetComponent<EnemyBehaviour>().Die(this);
-        }
+        _biggerAttack = true;
+        yield return new WaitForSeconds(timerBigAttack);
+        _biggerAttack = false;
     }
 
+    public bool GetBiggerAttack()
+    {
+        return _biggerAttack;
+    }
     /// <summary>
     /// Return the end position of movement
     /// </summary>
