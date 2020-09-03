@@ -40,9 +40,30 @@ public class CameraController : MonoBehaviour
         Vector2 PlayerOnScreen = Camera.main.WorldToViewportPoint(GameController.instance.player.transform.position);
         if (PlayerOnScreen.x < viewportLimit.x || PlayerOnScreen.y < viewportLimit.y || PlayerOnScreen.x > 1 - viewportLimit.x || PlayerOnScreen.y > 1 - viewportLimit.y)
         {
+            bool up, down, left, right;
+            down = PlayerOnScreen.y < viewportLimit.y;
+            up = PlayerOnScreen.y > 1 - viewportLimit.y;
+            left = PlayerOnScreen.x < viewportLimit.x;
+            right = PlayerOnScreen.x > 1 - viewportLimit.x;
+
+            Vector2 directionMovement = GameController.instance.player.GetEndPositionMovement() - GameController.instance.player.transform.position;
+
             if (PlayerOnScreen.x < 0.1f || PlayerOnScreen.y < 0.1f || PlayerOnScreen.x > 1 - 0.1f || PlayerOnScreen.y > 1 - 0.1f)
             {
-                _currentSpeedTransitionMovement = 0;
+                down = PlayerOnScreen.y < 0.1f;
+                up = PlayerOnScreen.y > 1 - 0.1f;
+                left = PlayerOnScreen.x < 0.1f;
+                right = PlayerOnScreen.x > 1 - 0.1f;
+
+                if ((directionMovement.x > 0 && left) || (directionMovement.x < 0 && right) || (directionMovement.y > 0 && down) || (directionMovement.y < 0 && up))
+                {
+                    _currentSpeedTransitionMovement = 0;
+                }
+                else
+                {
+                    _currentSpeedTransitionMovement = speedTransitionMovement;
+                }
+
             }
             else
             {
@@ -52,7 +73,14 @@ public class CameraController : MonoBehaviour
                 }
                 else
                 {
-                    _currentSpeedTransitionMovement = GameController.instance.player.speedMovement;
+                    if ((directionMovement.x > 0 && left) || (directionMovement.x < 0 && right) || (directionMovement.y > 0 && down) || (directionMovement.y < 0 && up))
+                    {
+                        _currentSpeedTransitionMovement = GameController.instance.player.speedMovement;
+                    }
+                    else
+                    {
+                        _currentSpeedTransitionMovement = speedTransitionMovement;
+                    }
                 }
             }
         }
@@ -61,7 +89,7 @@ public class CameraController : MonoBehaviour
             _currentSpeedTransitionMovement = speedTransitionMovement;
         }
 
-
+        //Use gravity or not
         if (GameController.instance.player.GetVelocity() != Vector2.zero)
         {
             //Change position of camera

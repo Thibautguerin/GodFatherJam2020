@@ -75,7 +75,10 @@ public class PlayerController : MonoBehaviour
         {
             _currentStat = changementStats.Length - 1;
         }
-        ApplyStats();
+        else
+        {
+            ApplyStats();
+        }
     }
     public void DownGradeStats()
     {
@@ -85,7 +88,10 @@ public class PlayerController : MonoBehaviour
         {
             _currentStat = 0;
         }
-        ApplyStats();
+        else
+        {
+            ApplyStats();
+        }
     }
     public void ApplyStats()
     {
