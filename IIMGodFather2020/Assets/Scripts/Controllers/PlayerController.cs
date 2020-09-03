@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private float _sizeScale = 0;
 
-    public ParticleSystem shocwaveParticle;
+    public ParticleSystem shockwaveParticle;
+    public ParticleSystem shockwaveInverseParticle;
+
 
     private bool inPause = false;
 
@@ -31,7 +33,6 @@ public class PlayerController : MonoBehaviour
         _areaAirAttack = GetComponentInChildren<CircleCollider2D>();
         _areaAirAttack.enabled = false;
         _sizeScale = transform.localScale.x;
-        shocwaveParticle = GetComponentInChildren<ParticleSystem>();
     }
 
     // Start is called before the first frame update
@@ -146,7 +147,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator AirAttack()
     {
         _areaAirAttack.enabled = true;
-        shocwaveParticle.Play();
+        shockwaveParticle.Play();
         yield return new WaitForSeconds(0.3f);
         _areaAirAttack.enabled = false;
     }
@@ -154,6 +155,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator BiggerAttack()
     {
         _biggerAttack = true;
+        shockwaveInverseParticle.Play();
         yield return new WaitForSeconds(timerBigAttack);
         _biggerAttack = false;
     }
