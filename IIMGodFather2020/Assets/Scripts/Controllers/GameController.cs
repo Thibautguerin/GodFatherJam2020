@@ -31,6 +31,11 @@ public class GameController : MonoBehaviour
         else if (instance != this) Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        isPlaying = true;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
