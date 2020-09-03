@@ -89,11 +89,11 @@ public class PlayerController : MonoBehaviour
                 {
                     if (directionMovement.x < 0)
                     {
-                        display.transform.localScale = new Vector3(1, 1, 1);
+                        display.transform.localScale = new Vector3(_sizeScale, _sizeScale, _sizeScale);
                     }
                     else
                     {
-                        display.transform.localScale = new Vector3(-1, 1, 1);
+                        display.transform.localScale = new Vector3(-_sizeScale, _sizeScale, _sizeScale);
                     }
                 }
             }
