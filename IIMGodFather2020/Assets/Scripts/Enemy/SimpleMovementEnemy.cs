@@ -26,12 +26,14 @@ public class SimpleMovementEnemy : EnemyBehaviour
         }
     }
 
-    public override void Die()
+    public override void Die(PlayerController collide)
     {
-        base.Die();
-
-        StopAllCoroutines();
-        Destroy(gameObject);
+        if (collide.GetGravity() > 0)
+        {
+            base.Die(collide);
+            StopAllCoroutines();
+            Destroy(gameObject);
+        }
     }
 
     public override void Movement()

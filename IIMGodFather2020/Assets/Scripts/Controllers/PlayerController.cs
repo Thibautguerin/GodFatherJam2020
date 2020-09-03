@@ -75,7 +75,10 @@ public class PlayerController : MonoBehaviour
         {
             _currentStat = changementStats.Length - 1;
         }
-        ApplyStats();
+        else
+        {
+            ApplyStats();
+        }
     }
     public void DownGradeStats()
     {
@@ -85,7 +88,10 @@ public class PlayerController : MonoBehaviour
         {
             _currentStat = 0;
         }
-        ApplyStats();
+        else
+        {
+            ApplyStats();
+        }
     }
     public void ApplyStats()
     {
@@ -108,7 +114,14 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.GetComponent<EnemyBehaviour>())
         {
-            collision.GetComponent<EnemyBehaviour>().Die();
+            collision.GetComponent<EnemyBehaviour>().Die(this);
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<EnemyBehaviour>() && _rb.gravityScale > 0)
+        {
+            collision.gameObject.GetComponent<EnemyBehaviour>().Die(this);
         }
     }
 
@@ -124,6 +137,11 @@ public class PlayerController : MonoBehaviour
     public Vector2 GetVelocity()
     {
         return _rb.velocity;
+    }
+
+    public float GetGravity()
+    {
+        return _rb.gravityScale;
     }
 }
 

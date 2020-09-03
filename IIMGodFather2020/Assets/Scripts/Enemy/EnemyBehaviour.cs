@@ -35,7 +35,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     public abstract void Movement();
 
-    public virtual void Die()
+    public virtual void Die(PlayerController collide)
     {
         GameController.instance.enemyController.enemyList.Remove(this);
     }
