@@ -5,6 +5,9 @@ using UnityEngine;
 public class Sap : MonoBehaviour
 {
     public float lifeTime = 8f;
+    public int healPointToGive;
+
+    private bool isHit = false;
 
     private void Awake()
     {
@@ -21,7 +24,12 @@ public class Sap : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // gérer la collision avec le perso
+        if (collision.gameObject.tag == "Player" && !isHit)
+        {
+            isHit = true;
+            StartCoroutine(FadeOut());
+            GameController.instance.tree.RestoreLife(healPointToGive);
+        }
     }
 
     IEnumerator FadeIn()
