@@ -81,6 +81,7 @@ public class EnemyController : MonoBehaviour
 
     public GameObject GetRandomPlacement(GameObject[] placement)
     {
+        return placement[Random.Range(0, placement.Length)];
         for (int i = 0; i < placement.Length; i++)
         {
             if (placement[i].activeSelf)
