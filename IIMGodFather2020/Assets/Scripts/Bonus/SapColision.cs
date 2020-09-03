@@ -17,7 +17,6 @@ public class SapColision : MonoBehaviour
     {
         if (!isHit)
         {
-            Debug.Log("test");
             Vector3 pos = new Vector3(transform.position.x, other.GetComponent<Collider2D>().bounds.center.y + other.GetComponent<Collider2D>().bounds.size.y / 2 + Sap.GetComponent<SpriteRenderer>().bounds.size.y / 2, 0);
             Instantiate(Sap, pos,Sap.transform.rotation);
             isHit = true;
