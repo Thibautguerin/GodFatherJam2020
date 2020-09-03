@@ -8,13 +8,13 @@ public class PauseMenu : MonoBehaviour
 { 
 
     [Header("Canvas")]
-    public Canvas canvas;
+    public GameObject pausePanel;
 
     
 
     public void ResumeGame()
     {
-        canvas.gameObject.SetActive(false);
+        pausePanel.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
 
