@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float timerBigAttack = 0.5f;
 
     public Animator animator;
+    private float _sizeScale = 0;
 
     private bool inPause = false;
 
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _areaAirAttack = GetComponentInChildren<CircleCollider2D>();
         _areaAirAttack.enabled = false;
+        _sizeScale = transform.localScale.x;
     }
 
     // Start is called before the first frame update
