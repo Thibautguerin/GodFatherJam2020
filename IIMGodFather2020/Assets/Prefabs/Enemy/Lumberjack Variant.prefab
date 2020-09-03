@@ -34,6 +34,7 @@ MonoBehaviour:
   speedMovement: 10
   attackRate: 1
   attackDommage: 1
+  animator: {fileID: -2621422523993273824}
 --- !u!1001 &4352099432125918011
 PrefabInstance:
   m_ObjectHideFlags: 0

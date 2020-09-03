@@ -6,6 +6,7 @@ public class LumberjackEnemy : EnemyBehaviour
 {
     private bool _sens = false;
     private bool _isAttack = false;
+    public Animator animator;
 
     private void FixedUpdate()
     {
@@ -49,5 +50,11 @@ public class LumberjackEnemy : EnemyBehaviour
             _isAttack = true;
             Attack();
         }
+    }
+
+    public override void Attack()
+    {
+        base.Attack();
+        animator.SetBool("Attack", true);
     }
 }

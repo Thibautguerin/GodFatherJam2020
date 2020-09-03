@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleMovementEnemy : EnemyBehaviour
+public class SpiritEnemy : EnemyBehaviour
 {
     private bool _sens = false;
     private bool _isAttack = false;
@@ -49,4 +49,5 @@ public class SimpleMovementEnemy : EnemyBehaviour
             Attack();
         }
     }
+
 }
