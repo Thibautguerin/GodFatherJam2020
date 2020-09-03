@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public SpriteRenderer display;
     public float speedMovement = 0;
+    public float mouseDeadZoneRadius = 0.8f; 
     private Vector3 _positionOnMovement = Vector3.zero;
 
     public StatsPlayer[] changementStats = new StatsPlayer[2];
@@ -57,7 +58,9 @@ public class PlayerController : MonoBehaviour
          Vector3 mousePos = Input.mousePosition;
          mousePos.z = Camera.main.nearClipPlane;
 
-         if (MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
+         if ((Mathf.Abs(Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position)) > mouseDeadZoneRadius
+            || Mathf.Abs(Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos))) > mouseDeadZoneRadius)
+            && MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
          {
             _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
          }
@@ -70,7 +73,12 @@ public class PlayerController : MonoBehaviour
         {
             DownGradeStats();
         }
-        transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+
+        if (Mathf.Abs(Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position)) > mouseDeadZoneRadius
+            || Mathf.Abs(Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos))) > mouseDeadZoneRadius)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+        }
     }
 
     public void UpGradeStats()
