@@ -7,6 +7,8 @@ public class SpiritEnemy : EnemyBehaviour
     private bool _sens = false;
     private bool _isAttack = false;
 
+    private float _sizeScale;
+
     private void FixedUpdate()
     {
         if(!_isAttack)
@@ -16,17 +18,16 @@ public class SpiritEnemy : EnemyBehaviour
     public override void Init()
     {
         base.Init();
+        _sizeScale = transform.localScale.x;
         if (GameController.instance.tree.transform.position.x < transform.position.x)
         {
             _sens = true;
-            transform.localScale = new Vector3(1, 1, 1);
-
+            transform.localScale = new Vector3(_sizeScale, _sizeScale, _sizeScale);
         }
         else
         {
             _sens = false;
-            transform.localScale = new Vector3(-1, 1, 1);
-
+            transform.localScale = new Vector3(-_sizeScale, _sizeScale, _sizeScale);
         }
     }
 

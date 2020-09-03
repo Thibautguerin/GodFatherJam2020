@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b066d5ac075944429abcc591d334bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 10
-  healPointToGive: 0
+  lifeTime: 4
+  healPointToGive: 10
 --- !u!61 &8012233944864300824
 BoxCollider2D:
   m_ObjectHideFlags: 0
