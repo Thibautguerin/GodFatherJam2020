@@ -89,7 +89,6 @@ public class PlayerController : MonoBehaviour
     }
     public void DownGradeStats()
     {
-        StartCoroutine(AirAttack());
         _currentStat--;
         if (_currentStat < 0)
         {
@@ -97,6 +96,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StartCoroutine(AirAttack());
             ApplyStats();
             animator.SetTrigger("Narrowing");
         }
