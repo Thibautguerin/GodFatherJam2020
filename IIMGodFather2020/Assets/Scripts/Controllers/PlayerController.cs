@@ -21,6 +21,10 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private float _sizeScale = 0;
 
+    public ParticleSystem shockwaveParticle;
+    public ParticleSystem shockwaveInverseParticle;
+
+
     private bool inPause = false;
 
     private void Awake()
@@ -143,6 +147,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator AirAttack()
     {
         _areaAirAttack.enabled = true;
+        shockwaveParticle.Play();
         yield return new WaitForSeconds(0.3f);
         _areaAirAttack.enabled = false;
     }
@@ -150,6 +155,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator BiggerAttack()
     {
         _biggerAttack = true;
+        shockwaveInverseParticle.Play();
         yield return new WaitForSeconds(timerBigAttack);
         _biggerAttack = false;
     }

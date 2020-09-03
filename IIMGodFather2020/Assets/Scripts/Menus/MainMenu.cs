@@ -23,6 +23,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("Play !");
+        Time.timeScale = 1;
         SceneManager.LoadScene(nameLevel);
     }
 
