@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
         if (timer <= 0)
         {
             victoryPanel.gameObject.SetActive(true);
+            SoundEffectsController.instance.MakeVictorySound();
             Time.timeScale = 0;
         }
     }
@@ -78,5 +79,6 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 0;
         defeatPanel.gameObject.SetActive(true);
+        SoundEffectsController.instance.MakeDefeatSound();
     }
 }

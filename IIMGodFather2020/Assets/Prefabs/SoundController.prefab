@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8829798213137228527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9160507888630950997}
+  - component: {fileID: 6902254416428913118}
+  m_Layer: 0
+  m_Name: SoundController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9160507888630950997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8829798213137228527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42500463, y: -3.2894657, z: -466.72882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6902254416428913118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8829798213137228527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96cfecc9e29c08478d75d9c848c26ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lumberjackDeath: {fileID: 8300000, guid: 633693b7c9dd78e47ace949596239b9f, type: 3}
+  lumberjackSpawn: {fileID: 8300000, guid: 1e5700b255397994db33d0d8c4b18345, type: 3}
+  lumberjackAttack: {fileID: 8300000, guid: 4a7b5ccfe94f87d48b787df24c7848f3, type: 3}
+  badSpiritDeath: {fileID: 8300000, guid: c5c4faa445f0f4547b5cab86a2e4eb9c, type: 3}
+  badSpiritSpawn: {fileID: 8300000, guid: 87ef05e36c8b8f84590625226480bcaa, type: 3}
+  badSpiritAttack: {fileID: 8300000, guid: eff2212f4edfdc541adcd62e4a784015, type: 3}
+  thunder: {fileID: 8300000, guid: f3f9a7402aa719b4780425bf99763c90, type: 3}
+  fireOn: {fileID: 8300000, guid: ebe73226a6b33114cb7afc376f8fc924, type: 3}
+  fireOff: {fileID: 8300000, guid: a828263ad5fc98a45999dd5e1a4c5262, type: 3}
+  spiritGrowth: {fileID: 8300000, guid: 072d13357b4b80f4c9d6df78f809919f, type: 3}
+  shockWave: {fileID: 8300000, guid: 4faf69c7c5ba4df4cba5603e85f1824a, type: 3}
+  sapTreeHeal: {fileID: 8300000, guid: 94f2ef54110a6384cbe4debd59f3c0fb, type: 3}
+  defeat: {fileID: 8300000, guid: 3ea2a051d37232d4ab1a5b56e1d7fe64, type: 3}
+  victory: {fileID: 8300000, guid: 5c60c9e88c2ae33478ad4097b7fb902d, type: 3}

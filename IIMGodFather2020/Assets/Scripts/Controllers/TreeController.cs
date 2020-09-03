@@ -42,6 +42,7 @@ public class TreeController : MonoBehaviour
     public void RestoreLife(int lifeUp)
     {
         currentHealth += lifeUp;
+        SoundEffectsController.instance.MakeSapTreeHealSound();
         if (currentHealth >= maxTreeHealth)
         {
             currentHealth = maxTreeHealth;
