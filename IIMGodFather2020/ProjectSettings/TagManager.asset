@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tree
   - Attack
+  - Floor
   layers:
   - Default
   - TransparentFX
