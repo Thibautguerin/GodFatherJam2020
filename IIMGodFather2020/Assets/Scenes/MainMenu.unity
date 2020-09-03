@@ -206,6 +206,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &319057607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7773492281269716017, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+  m_PrefabInstance: {fileID: 7773492280685613139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ca36343a36a8134d9e287a5fdf78775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &521309684
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 7773492281269716017, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: nameLevel
+      value: MainScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7773492281269716019, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -495,6 +510,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773492281931546046, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 319057607}
+    - target: {fileID: 7773492281931546046, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7773492281931546047, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -519,6 +542,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773492281970471537, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 319057607}
+    - target: {fileID: 7773492281970471537, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7773492281970471538, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -542,6 +573,14 @@ PrefabInstance:
     - target: {fileID: 7773492281970471538, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773492282144822461, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 319057607}
+    - target: {fileID: 7773492282144822461, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMenuVolume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}

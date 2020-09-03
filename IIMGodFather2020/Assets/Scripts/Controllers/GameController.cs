@@ -11,16 +11,17 @@ public class GameController : MonoBehaviour
     public TreeController tree;
     public EnemyController enemyController;
 
-    // Canvas de Défaite
-    public Canvas defeatCanvas;
-    public Canvas victoryCanvas;
+    [Header("Canvas Conditions Victoire/Défaite")]
+    public GameObject defeatPanel;
+    public GameObject victoryPanel;
 
-    // Timer
-    public float timer = 100;
+    [Header("Timer")]
+    public float timer = 20;
     public bool isPlaying = false;
 
+    [Header("Pause")]
+    public GameObject pausePanel;
 
-    
     [Header("Map")]
     public float radiusLimitMap = 10;
 
@@ -30,8 +31,31 @@ public class GameController : MonoBehaviour
         else if (instance != this) Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        isPlaying = true;
+    }
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(pausePanel.gameObject.activeInHierarchy == false)
+            {
+                pausePanel.gameObject.SetActive(true);
+                Time.timeScale = 0;
+            }else
+            {
+                pausePanel.gameObject.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
+
         if (timer > 0 && isPlaying)
         {
             timer -= Time.deltaTime;
@@ -39,7 +63,8 @@ public class GameController : MonoBehaviour
 
         if (timer <= 0)
         {
-            victoryCanvas.gameObject.SetActive(true);
+            victoryPanel.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -51,6 +76,6 @@ public class GameController : MonoBehaviour
     public void Defeat()
     {
         Time.timeScale = 0;
-        defeatCanvas.gameObject.SetActive(true);
+        defeatPanel.gameObject.SetActive(true);
     }
 }

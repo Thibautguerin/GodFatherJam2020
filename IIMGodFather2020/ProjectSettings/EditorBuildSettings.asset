@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/TestScenes/JulPause.unity
-    guid: 1a7d686eea7697946947cce73168db83
-  - enabled: 1
-    path: Assets/Scenes/TestScenes/JulMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: f3ec696ceeeb540409650488182468dc
   - enabled: 1
-    path: Assets/Scenes/TestScenes/JulVictory.unity
-    guid: dcd7d4c527967c64899792b963fd1d0a
+    path: Assets/Scenes/MainScene.unity
+    guid: 94a9fd12d40c84248a3c02282f4bca0c
   m_configObjects: {}
