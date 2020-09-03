@@ -47,10 +47,12 @@ public class GameController : MonoBehaviour
         {
             if(pausePanel.gameObject.activeInHierarchy == false)
             {
+                player.SetInPause(true);
                 pausePanel.gameObject.SetActive(true);
                 Time.timeScale = 0;
             }else
             {
+                player.SetInPause(false);
                 pausePanel.gameObject.SetActive(false);
                 Time.timeScale = 1;
             }
