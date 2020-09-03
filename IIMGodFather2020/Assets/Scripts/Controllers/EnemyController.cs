@@ -76,21 +76,13 @@ public class EnemyController : MonoBehaviour
     {
         EnemyBehaviour enemy = Instantiate(enemyPrefabs[index]);
         enemy.transform.position = GetRandomPlacement(placements).transform.position;
+        enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y, 0);
         enemy.Init();
     }
 
     public GameObject GetRandomPlacement(GameObject[] placement)
     {
         return placement[Random.Range(0, placement.Length)];
-        for (int i = 0; i < placement.Length; i++)
-        {
-            if (placement[i].activeSelf)
-            {
-                StartCoroutine(StopPlacement(placement[i]));
-                return placement[i];
-            }
-        }
-        return null;
     }
     private IEnumerator StopPlacement(GameObject objectPlacement)
     {
