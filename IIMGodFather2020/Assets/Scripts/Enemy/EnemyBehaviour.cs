@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class EnemyBehaviour : MonoBehaviour
 {
+    public SpriteRenderer display;
     public float speedMovement;
 
     [Header("Attack")]
@@ -12,6 +13,8 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
+        if(!display)
+            display = GetComponent<SpriteRenderer>();
         GameController.instance.enemyController.enemyList.Add(this);
         //Init();
     }

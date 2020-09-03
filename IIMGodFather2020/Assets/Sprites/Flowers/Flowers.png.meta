@@ -1,82 +1,37 @@
 fileFormatVersion: 2
-guid: 82323594fbc360547890a61df6bd07cb
+guid: b2f199ad029fe9f42ad40c506babf94f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -917925647244302476
-    second: Lumberman_Attack_0
+      213: 4632598083906848925
+    second: Flowers_0
   - first:
-      213: -7736691335717996682
-    second: Lumberman_Attack_1
+      213: -8599076897651075110
+    second: Flowers_1
   - first:
-      213: -2450406693466409173
-    second: Lumberman_Attack_2
+      213: -1380961279234335697
+    second: Flowers_2
   - first:
-      213: -2275763172630531704
-    second: Lumberman_Attack_3
+      213: 6532252411737238267
+    second: Flowers_3
   - first:
-      213: -2143168101189611057
-    second: Lumberman_Attack_4
+      213: -3049244359801467698
+    second: Flowers_4
   - first:
-      213: -6349738337964475142
-    second: Lumberman_Attack_5
+      213: -1905306971469373461
+    second: Flowers_5
   - first:
-      213: -6066356939418134429
-    second: Lumberman_Attack_6
+      213: 1875809120407446195
+    second: Flowers_6
   - first:
-      213: -3513744659982604570
-    second: Lumberman_Attack_7
+      213: -3155580625666305983
+    second: Flowers_7
   - first:
-      213: -3850097899128740020
-    second: Lumberman_Attack_8
+      213: -2757444085851235607
+    second: Flowers_8
   - first:
-      213: 1726555403663930976
-    second: Lumberman_Attack_9
-  - first:
-      213: 85537293400519079
-    second: Lumberman_Attack_10
-  - first:
-      213: 1633525664493178940
-    second: Lumberman_Attack_11
-  - first:
-      213: 5567323305986331329
-    second: Lumberman_Attack_12
-  - first:
-      213: 7613951417613617395
-    second: Lumberman_Attack_13
-  - first:
-      213: 6815948228787854116
-    second: Lumberman_Attack_14
-  - first:
-      213: 9211364626321943345
-    second: Lumberman_Attack_15
-  - first:
-      213: 9030853166786806298
-    second: Lumberman_Attack_16
-  - first:
-      213: -3493844766531471698
-    second: Lumberman_Attack_17
-  - first:
-      213: -7489647420780820106
-    second: Lumberjack_Attack_0
-  - first:
-      213: 2591033037584872990
-    second: Lumberjack_Attack_1
-  - first:
-      213: -2359311668466989742
-    second: Lumberjack_Attack_2
-  - first:
-      213: 3869278141612011510
-    second: Lumberjack_Attack_3
-  - first:
-      213: 7197771326067409834
-    second: Lumberjack_Attack_4
-  - first:
-      213: 2244995788481014617
-    second: Lumberjack_Attack_5
-  - first:
-      213: 6483466499829215202
-    second: Lumberjack_Attack_6
+      213: 388093049040395086
+    second: Flowers_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lumberjack_Attack_0
+      name: Flowers_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 708
-        width: 318
-        height: 354
+        x: 36
+        y: 24
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67940774a5d6f0890800000000000000
-      internalID: -7489647420780820106
+      spriteID: d984c6aa96b4a4040800000000000000
+      internalID: 4632598083906848925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lumberjack_Attack_1
+      name: Flowers_1
       rect:
         serializedVersion: 2
-        x: 318
-        y: 708
-        width: 318
-        height: 354
+        x: 138
+        y: 18
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e163c8ed1d235f320800000000000000
-      internalID: 2591033037584872990
+      spriteID: ad75d371f11f9a880800000000000000
+      internalID: -8599076897651075110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lumberjack_Attack_2
+      name: Flowers_2
       rect:
         serializedVersion: 2
-        x: 636
-        y: 708
-        width: 318
-        height: 354
+        x: 240
+        y: 24
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2554796a98a024fd0800000000000000
-      internalID: -2359311668466989742
+      spriteID: f2c1bae7807d5dce0800000000000000
+      internalID: -1380961279234335697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lumberjack_Attack_3
+      name: Flowers_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 354
-        width: 318
-        height: 354
+        x: 342
+        y: 36
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ffa7ff28ff62b530800000000000000
-      internalID: 3869278141612011510
+      spriteID: bfa69c885f837aa50800000000000000
+      internalID: 6532252411737238267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lumberjack_Attack_4
+      name: Flowers_4
       rect:
         serializedVersion: 2
-        x: 318
-        y: 354
-        width: 318
-        height: 354
+        x: 444
+        y: 24
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa38db8b2ee93e360800000000000000
-      internalID: 7197771326067409834
+      spriteID: ecc8bac0968eea5d0800000000000000
+      internalID: -3049244359801467698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lumberjack_Attack_5
+      name: Flowers_5
       rect:
         serializedVersion: 2
-        x: 636
-        y: 354
-        width: 318
-        height: 354
+        x: 546
+        y: 18
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95ba8ae66c3d72f10800000000000000
-      internalID: 2244995788481014617
+      spriteID: bef1e79776dfe85e0800000000000000
+      internalID: -1905306971469373461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lumberjack_Attack_6
+      name: Flowers_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 318
-        height: 354
+        x: 648
+        y: 30
+        width: 96
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,8 +259,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef27734e66e9f950800000000000000
-      internalID: 6483466499829215202
+      spriteID: 3b2e250e476380a10800000000000000
+      internalID: 1875809120407446195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 24
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1401e03d3202534d0800000000000000
+      internalID: -3155580625666305983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers_8
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 36
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ead5d6a6379bb9d0800000000000000
+      internalID: -2757444085851235607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flowers_9
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 24
+        width: 96
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4bd9d76298c26500800000000000000
+      internalID: 388093049040395086
       vertices: []
       indices: 
       edges: []

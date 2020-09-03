@@ -1,82 +1,22 @@
 fileFormatVersion: 2
-guid: 82323594fbc360547890a61df6bd07cb
+guid: 60e1c1684bf50b644985b886740fbb4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -917925647244302476
-    second: Lumberman_Attack_0
+      213: -735912781959301314
+    second: Firefly_fly_0
   - first:
-      213: -7736691335717996682
-    second: Lumberman_Attack_1
+      213: -5554861878071948976
+    second: Firefly_fly_1
   - first:
-      213: -2450406693466409173
-    second: Lumberman_Attack_2
+      213: -7940845621090492448
+    second: Firefly_fly_2
   - first:
-      213: -2275763172630531704
-    second: Lumberman_Attack_3
+      213: -5112462949157112341
+    second: Firefly_fly_3
   - first:
-      213: -2143168101189611057
-    second: Lumberman_Attack_4
-  - first:
-      213: -6349738337964475142
-    second: Lumberman_Attack_5
-  - first:
-      213: -6066356939418134429
-    second: Lumberman_Attack_6
-  - first:
-      213: -3513744659982604570
-    second: Lumberman_Attack_7
-  - first:
-      213: -3850097899128740020
-    second: Lumberman_Attack_8
-  - first:
-      213: 1726555403663930976
-    second: Lumberman_Attack_9
-  - first:
-      213: 85537293400519079
-    second: Lumberman_Attack_10
-  - first:
-      213: 1633525664493178940
-    second: Lumberman_Attack_11
-  - first:
-      213: 5567323305986331329
-    second: Lumberman_Attack_12
-  - first:
-      213: 7613951417613617395
-    second: Lumberman_Attack_13
-  - first:
-      213: 6815948228787854116
-    second: Lumberman_Attack_14
-  - first:
-      213: 9211364626321943345
-    second: Lumberman_Attack_15
-  - first:
-      213: 9030853166786806298
-    second: Lumberman_Attack_16
-  - first:
-      213: -3493844766531471698
-    second: Lumberman_Attack_17
-  - first:
-      213: -7489647420780820106
-    second: Lumberjack_Attack_0
-  - first:
-      213: 2591033037584872990
-    second: Lumberjack_Attack_1
-  - first:
-      213: -2359311668466989742
-    second: Lumberjack_Attack_2
-  - first:
-      213: 3869278141612011510
-    second: Lumberjack_Attack_3
-  - first:
-      213: 7197771326067409834
-    second: Lumberjack_Attack_4
-  - first:
-      213: 2244995788481014617
-    second: Lumberjack_Attack_5
-  - first:
-      213: 6483466499829215202
-    second: Lumberjack_Attack_6
+      213: 9218290550387837782
+    second: Firefly_fly_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -141,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,139 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lumberjack_Attack_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 708
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67940774a5d6f0890800000000000000
-      internalID: -7489647420780820106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberjack_Attack_1
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 708
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e163c8ed1d235f320800000000000000
-      internalID: 2591033037584872990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberjack_Attack_2
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 708
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2554796a98a024fd0800000000000000
-      internalID: -2359311668466989742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberjack_Attack_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 354
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ffa7ff28ff62b530800000000000000
-      internalID: 3869278141612011510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberjack_Attack_4
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 354
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa38db8b2ee93e360800000000000000
-      internalID: 7197771326067409834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberjack_Attack_5
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 354
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95ba8ae66c3d72f10800000000000000
-      internalID: 2244995788481014617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberjack_Attack_6
+      name: Firefly_fly_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 318
-        height: 354
+        width: 96
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,8 +118,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ef27734e66e9f950800000000000000
-      internalID: 6483466499829215202
+      spriteID: e3775ad493389c5f0800000000000000
+      internalID: -735912781959301314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly_fly_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 96
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05989258d8a29e2b0800000000000000
+      internalID: -5554861878071948976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly_fly_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef5fa2eaf27cc190800000000000000
+      internalID: -7940845621090492448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly_fly_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5f424e802ec09b0800000000000000
+      internalID: -5112462949157112341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firefly_fly_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b053c3a62fdef70800000000000000
+      internalID: 9218290550387837782
       vertices: []
       indices: 
       edges: []

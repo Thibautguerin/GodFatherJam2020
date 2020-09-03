@@ -59,6 +59,7 @@ public class GameController : MonoBehaviour
         if (timer > 0 && isPlaying)
         {
             timer -= Time.deltaTime;
+            UIController.instance.Timer(Mathf.RoundToInt(timer));
         }
 
         if (timer <= 0)

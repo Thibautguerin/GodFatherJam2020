@@ -21,10 +21,12 @@ public class LumberjackEnemy : EnemyBehaviour
         if (GameController.instance.tree.transform.position.x < transform.position.x)
         {
             _sens = true;
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
             _sens = false;
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
