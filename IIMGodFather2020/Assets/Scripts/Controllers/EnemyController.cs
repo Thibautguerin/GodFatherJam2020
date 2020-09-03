@@ -46,6 +46,10 @@ public class EnemyController : MonoBehaviour
         {
             _spawnFirePlacement[i] = spawnParentFirePlacement.transform.GetChild(i).gameObject;
         }
+
+        StartCoroutine(SpawnFire());
+        StartCoroutine(SpawnSpirit());
+        StartCoroutine(SpawnLanderjack());
     }
 
     public void Stop()

@@ -35,13 +35,13 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     public abstract void Movement();
 
-    public virtual void Die(PlayerController collide)
+    public virtual void Die(PlayerController collide, bool trigger)
     {
         GameController.instance.enemyController.enemyList.Remove(this);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Stop Move");
+        Debug.Log("Stop Move  "+collision.name);
     }
 }

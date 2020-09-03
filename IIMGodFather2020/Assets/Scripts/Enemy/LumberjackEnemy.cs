@@ -27,11 +27,11 @@ public class LumberjackEnemy : EnemyBehaviour
         }
     }
 
-    public override void Die(PlayerController collide)
+    public override void Die(PlayerController collide, bool trigger)
     {
         if (collide.GetGravity() > 0)
         {
-            base.Die(collide);
+            base.Die(collide, trigger);
             StopAllCoroutines();
             Destroy(gameObject);
         }
@@ -48,6 +48,17 @@ public class LumberjackEnemy : EnemyBehaviour
         {
             _isAttack = true;
             Attack();
+        }
+    }
+
+    protected void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (collision.transform.position.y > transform.position.y)
+            {
+                Die(GameController.instance.player, false);
+            }
         }
     }
 }
