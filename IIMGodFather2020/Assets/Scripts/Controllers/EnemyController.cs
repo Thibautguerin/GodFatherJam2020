@@ -8,51 +8,52 @@ public class EnemyController : MonoBehaviour
     public EnemyBehaviour[] enemyPrefabs;
 
     public GameObject spawnParentLaderjackPlacement;
-    private GameObject[] spawnLaderjackPlacement;
+    private GameObject[] _spawnLaderjackPlacement;
 
     public GameObject spawnParentSpiritsPlacement;
-    private GameObject[] spawnSpiritsPlacement;
+    private GameObject[] _spawnSpiritsPlacement;
 
     public GameObject spawnParentFirePlacement;
     private GameObject[] _spawnFirePlacement;
 
-    public float minTimeSpawn = 10;
-    public float maxTimeSpawn = 70;
+    [Header("Fire Spawn")]
+    public float minFireTimeSpawn = 10;
+    public float maxFireTimeSpawn = 70;
+
+    [Header("Spirit Spawn")]
+    public float minSpiritTimeSpawn = 10;
+    public float maxSpiritTimeSpawn = 70;
+
+    [Header("Lumberjack Spawn")]
+    public float minLumberjackTimeSpawn = 10;
+    public float maxLumberjackTimeSpawn = 70;
+
     private float _timeSpawn = 0;
     private float _selectedTimeSpawn = 0;
 
     private void Start()
     {
         GameController.instance.enemyController = this;
-        _selectedTimeSpawn = Random.Range(minTimeSpawn, maxTimeSpawn);
-
-        spawnLaderjackPlacement = new GameObject[spawnParentLaderjackPlacement.transform.childCount];
+        _spawnLaderjackPlacement = new GameObject[spawnParentLaderjackPlacement.transform.childCount];
         for (int i = 0; i < spawnParentLaderjackPlacement.transform.childCount; i++)
         {
-            spawnLaderjackPlacement[i] = spawnParentLaderjackPlacement.transform.GetChild(i).gameObject;
+            _spawnLaderjackPlacement[i] = spawnParentLaderjackPlacement.transform.GetChild(i).gameObject;
         }
-        spawnSpiritsPlacement = new GameObject[spawnParentSpiritsPlacement.transform.childCount];
+        _spawnSpiritsPlacement = new GameObject[spawnParentSpiritsPlacement.transform.childCount];
         for (int i = 0; i < spawnParentSpiritsPlacement.transform.childCount; i++)
         {
-            spawnSpiritsPlacement[i] = spawnParentSpiritsPlacement.transform.GetChild(i).gameObject;
+            _spawnSpiritsPlacement[i] = spawnParentSpiritsPlacement.transform.GetChild(i).gameObject;
         }
         _spawnFirePlacement = new GameObject[spawnParentFirePlacement.transform.childCount];
         for (int i = 0; i < spawnParentFirePlacement.transform.childCount; i++)
         {
             _spawnFirePlacement[i] = spawnParentFirePlacement.transform.GetChild(i).gameObject;
         }
-
     }
 
-    private void Update()
+    public void Stop()
     {
-        _timeSpawn += Time.deltaTime;
-        if(_timeSpawn > _selectedTimeSpawn)
-        {
-            SpawnRandomEnemy();
-            _timeSpawn = 0;
-            _selectedTimeSpawn = Random.Range(minTimeSpawn, maxTimeSpawn);
-        }
+        StopAllCoroutines();
     }
 
     #region SpawnEnemy
@@ -62,15 +63,38 @@ public class EnemyController : MonoBehaviour
         switch (rand)
         {
             case 0:
-                SpawnEnemy(0, spawnSpiritsPlacement);
+                SpawnEnemy(0, _spawnSpiritsPlacement);
                 break;
             case 1:
-                SpawnEnemy(1, spawnLaderjackPlacement);
+                SpawnEnemy(1, _spawnLaderjackPlacement);
                 break;
             case 2:
                 SpawnEnemy(2, _spawnFirePlacement);
                 break;
         }
+    }
+    private IEnumerator SpawnFire()
+    {
+        float timeToWait = Random.Range(minFireTimeSpawn, maxFireTimeSpawn);
+        yield return new WaitForSeconds(timeToWait);
+        SpawnEnemy(2, _spawnFirePlacement);
+        StartCoroutine(SpawnFire());
+    }
+    private IEnumerator SpawnSpirit()
+    {
+        float timeToWait = Random.Range(minSpiritTimeSpawn, maxSpiritTimeSpawn);
+        yield return new WaitForSeconds(timeToWait);
+        SpawnEnemy(0, _spawnSpiritsPlacement);
+        StartCoroutine(SpawnSpirit());
+
+    }
+    private IEnumerator SpawnLanderjack()
+    {
+        float timeToWait = Random.Range(minLumberjackTimeSpawn, maxLumberjackTimeSpawn);
+        yield return new WaitForSeconds(timeToWait);
+        SpawnEnemy(1, _spawnLaderjackPlacement);
+        StartCoroutine(SpawnLanderjack());
+
     }
     public void SpawnEnemy(int index, GameObject[] placements)
     {
@@ -83,12 +107,6 @@ public class EnemyController : MonoBehaviour
     public GameObject GetRandomPlacement(GameObject[] placement)
     {
         return placement[Random.Range(0, placement.Length)];
-    }
-    private IEnumerator StopPlacement(GameObject objectPlacement)
-    {
-        objectPlacement.SetActive(false);
-        yield return new WaitForSeconds(0.5f);
-        objectPlacement.SetActive(true);
     }
     #endregion
 }
