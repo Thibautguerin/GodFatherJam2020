@@ -101,15 +101,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 7806809887828677738}
   speedMovement: 4
+  mouseDeadZoneRadius: 0.8
   changementStats:
   - trigger: Narrowing
     speedMovement: 2
     gravityStrength: 0
-    zoomPower: 5
+    zoomPower: 50
   - trigger: Growth
     speedMovement: 1
     gravityStrength: 1
-    zoomPower: 15
+    zoomPower: 80
   timerBigAttack: 0.5
   animator: {fileID: 9018561080076901296}
 --- !u!50 &7806809887828677743

@@ -36,6 +36,7 @@ public class CameraController : MonoBehaviour
         _camera = GetComponent<Camera>();
         _basePosition = transform.position;
         _finalZoom = limitMinZoom;
+        _camera.fieldOfView = _finalZoom;
     }
 
 
@@ -113,14 +114,21 @@ public class CameraController : MonoBehaviour
         else
         {
             //Change position of camera
-            NewPosCam = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
+            if (_camera.fieldOfView > _finalZoom+1)
+            {
+                Debug.Log(_camera.fieldOfView + "   " + _finalZoom);
+                NewPosCam = Vector2.MoveTowards(transform.position, GameController.instance.player.transform.position, speedTransitionMovement * Time.deltaTime);
+            }
+            else
+            {
+                NewPosCam = Vector2.MoveTowards(transform.position, GameController.instance.player.GetEndPositionMovement(), _currentSpeedTransitionMovement * Time.deltaTime);
+            }
             NewPosCam = ClampPositionToScreen(NewPosCam);
-
         }
         NewPosCam = new Vector3(NewPosCam.x, NewPosCam.y, -10);
         transform.position = NewPosCam;
         //Smooth zoom
-        _camera.orthographicSize = Mathf.Lerp(_camera.orthographicSize, _finalZoom, speedZoom*Time.deltaTime);
+        _camera.fieldOfView = Mathf.Lerp(_camera.fieldOfView, _finalZoom, speedZoom*Time.deltaTime);
     }
 
     /// <summary>
