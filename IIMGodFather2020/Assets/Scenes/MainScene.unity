@@ -499,10 +499,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 99.3
       objectReference: {fileID: 0}
-    - target: {fileID: 8633608418146892084, guid: beccf2ce7c1f1bc47a6ce2652d16aa31, type: 3}
-      propertyPath: returnMainMenu
-      value: MainMenu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beccf2ce7c1f1bc47a6ce2652d16aa31, type: 3}
 --- !u!224 &597519903 stripped
@@ -693,10 +689,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9047940099249419218, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
-      propertyPath: returnMainMenu
-      value: MainMenu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
 --- !u!224 &735793047 stripped
@@ -866,14 +858,6 @@ PrefabInstance:
     - target: {fileID: 5355026701537015261, guid: ef145ff53d772b34ea36a5478b1bdfd6, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355026701537015262, guid: ef145ff53d772b34ea36a5478b1bdfd6, type: 3}
-      propertyPath: pausePanel
-      value: 
-      objectReference: {fileID: 899455642}
-    - target: {fileID: 5355026701537015263, guid: ef145ff53d772b34ea36a5478b1bdfd6, type: 3}
-      propertyPath: returnMainMenu
-      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5355026702079271134, guid: ef145ff53d772b34ea36a5478b1bdfd6, type: 3}
       propertyPath: m_AnchorMin.y

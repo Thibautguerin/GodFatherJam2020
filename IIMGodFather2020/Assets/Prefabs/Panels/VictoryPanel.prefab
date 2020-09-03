@@ -915,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b487787a126b74892cb508fb11b049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: JulPause
+  nextLevel: MainMenu
 --- !u!114 &9047940099249419218
 MonoBehaviour:
   m_ObjectHideFlags: 0
