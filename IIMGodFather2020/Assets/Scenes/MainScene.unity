@@ -227,10 +227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gapOnZoom: 100
-  speedZoom: 3
-  speedTransitionZoom: 3
-  limitMinZoom: 10
-  limitMaxZoom: 20
+  speedZoom: 10
+  speedTransitionZoom: 10
+  limitMinZoom: 50
+  limitMaxZoom: 90
   viewportLimit: {x: 0.2, y: 0.2}
   speedTransitionMovement: 3
   bounds:
