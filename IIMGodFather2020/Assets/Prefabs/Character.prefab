@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7806809887828677738}
   - component: {fileID: 7806809887828677740}
   - component: {fileID: 7806809887828677743}
+  - component: {fileID: 2137995067123867323}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7bb5fadf554eb9f4cb31b7b4abbdea21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2b2d5fcaa6d59148a81c9312bb4038d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 7806809887828677738}
-  speedMovement: 2
+  speedMovement: 4
   changementStats:
   - color: {r: 0.10734272, g: 1, b: 0, a: 1}
     speedMovement: 2
@@ -128,7 +129,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &2137995067123867323
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7806809887828677739}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0034935474, y: 0}
+  m_Size: {x: 0.7294326, y: 2.16}
+  m_Direction: 0
 --- !u!1 &7806809889478039981
 GameObject:
   m_ObjectHideFlags: 0
