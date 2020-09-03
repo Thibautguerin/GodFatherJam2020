@@ -24104,6 +24104,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1029044644300135165, guid: 7e6637e672129024cbb8cd4100752520, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380759977865461949, guid: 7e6637e672129024cbb8cd4100752520, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8054307378724791763, guid: 7e6637e672129024cbb8cd4100752520, type: 3}
       propertyPath: m_Enabled
       value: 1

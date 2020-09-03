@@ -13,7 +13,8 @@ public abstract class EnemyBehaviour : MonoBehaviour
 
     private void Start()
     {
-        display = GetComponent<SpriteRenderer>();
+        if(!display)
+            display = GetComponent<SpriteRenderer>();
         GameController.instance.enemyController.enemyList.Add(this);
         //Init();
     }
