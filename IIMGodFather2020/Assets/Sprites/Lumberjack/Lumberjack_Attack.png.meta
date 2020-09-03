@@ -56,6 +56,27 @@ TextureImporter:
   - first:
       213: -3493844766531471698
     second: Lumberman_Attack_17
+  - first:
+      213: -7489647420780820106
+    second: Lumberjack_Attack_0
+  - first:
+      213: 2591033037584872990
+    second: Lumberjack_Attack_1
+  - first:
+      213: -2359311668466989742
+    second: Lumberjack_Attack_2
+  - first:
+      213: 3869278141612011510
+    second: Lumberjack_Attack_3
+  - first:
+      213: 7197771326067409834
+    second: Lumberjack_Attack_4
+  - first:
+      213: 2244995788481014617
+    second: Lumberjack_Attack_5
+  - first:
+      213: 6483466499829215202
+    second: Lumberjack_Attack_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -143,7 +164,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lumberman_Attack_0
+      name: Lumberjack_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 318
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67940774a5d6f0890800000000000000
+      internalID: -7489647420780820106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lumberjack_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 708
+        width: 318
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e163c8ed1d235f320800000000000000
+      internalID: 2591033037584872990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lumberjack_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 708
+        width: 318
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2554796a98a024fd0800000000000000
+      internalID: -2359311668466989742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lumberjack_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 318
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffa7ff28ff62b530800000000000000
+      internalID: 3869278141612011510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lumberjack_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 354
+        width: 318
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa38db8b2ee93e360800000000000000
+      internalID: 7197771326067409834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lumberjack_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 354
+        width: 318
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ba8ae66c3d72f10800000000000000
+      internalID: 2244995788481014617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lumberjack_Attack_6
       rect:
         serializedVersion: 2
         x: 0
@@ -157,365 +304,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47768c9bc7fd243f0800000000000000
-      internalID: -917925647244302476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_1
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 677bfad8830c1a490800000000000000
-      internalID: -7736691335717996682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_2
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b27f1b858186efdd0800000000000000
-      internalID: -2450406693466409173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_3
-      rect:
-        serializedVersion: 2
-        x: 954
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 881f076b37dda60e0800000000000000
-      internalID: -2275763172630531704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_4
-      rect:
-        serializedVersion: 2
-        x: 1272
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc115aa87ffe142e0800000000000000
-      internalID: -2143168101189611057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_5
-      rect:
-        serializedVersion: 2
-        x: 1590
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afcb2fcbf9231e7a0800000000000000
-      internalID: -6349738337964475142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_6
-      rect:
-        serializedVersion: 2
-        x: 1908
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36891492188ffcba0800000000000000
-      internalID: -6066356939418134429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_7
-      rect:
-        serializedVersion: 2
-        x: 2226
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e6af4e29dbac3fc0800000000000000
-      internalID: -3513744659982604570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_8
-      rect:
-        serializedVersion: 2
-        x: 2544
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4724f30c54b19ac0800000000000000
-      internalID: -3850097899128740020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_9
-      rect:
-        serializedVersion: 2
-        x: 2862
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0667b60fdf4f5f710800000000000000
-      internalID: 1726555403663930976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_10
-      rect:
-        serializedVersion: 2
-        x: 3180
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a1bf2417b3ef2100800000000000000
-      internalID: 85537293400519079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_11
-      rect:
-        serializedVersion: 2
-        x: 3498
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c309993efe27ba610800000000000000
-      internalID: 1633525664493178940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_12
-      rect:
-        serializedVersion: 2
-        x: 3816
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c29113cc0b134d40800000000000000
-      internalID: 5567323305986331329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_13
-      rect:
-        serializedVersion: 2
-        x: 4134
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f801ff49703aa960800000000000000
-      internalID: 7613951417613617395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_14
-      rect:
-        serializedVersion: 2
-        x: 4452
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42b5a583dcc179e50800000000000000
-      internalID: 6815948228787854116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_15
-      rect:
-        serializedVersion: 2
-        x: 4770
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13ba480e25755df70800000000000000
-      internalID: 9211364626321943345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_16
-      rect:
-        serializedVersion: 2
-        x: 5088
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a120a019b19045d70800000000000000
-      internalID: 9030853166786806298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lumberman_Attack_17
-      rect:
-        serializedVersion: 2
-        x: 5406
-        y: 0
-        width: 318
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea6b88e22be538fc0800000000000000
-      internalID: -3493844766531471698
+      spriteID: 2ef27734e66e9f950800000000000000
+      internalID: 6483466499829215202
       vertices: []
       indices: 
       edges: []
