@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private float _sizeScale = 0;
 
+    private bool inPause = false;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -39,57 +41,60 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Wheel Mouse
-        float wheelMouse = Input.GetAxis("Mouse ScrollWheel");
-        if (wheelMouse != 0)
+        if (!inPause)
         {
-            if (wheelMouse > 0)
+            //Wheel Mouse
+            float wheelMouse = Input.GetAxis("Mouse ScrollWheel");
+            if (wheelMouse != 0)
             {
-                //Zoom Out
-                CameraController.instance.ZoomAction(false);
-            }
-            else
-            {
-                //Zoom In
-                CameraController.instance.ZoomAction(true);
-            }
-        }
-
-        //Movement with mouse position
-        
-         Vector3 mousePos = Input.mousePosition;
-         mousePos.z = 10;
-
-         if ((Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
-            || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
-            && MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
-         {
-            _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
-         }
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            UpGradeStats();
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            DownGradeStats();
-        }
-
-        if (Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
-            || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
-            Vector3 directionMovement = _positionOnMovement - transform.position;
-            if (directionMovement.x != 0)
-            {
-                if (directionMovement.x < 0)
+                if (wheelMouse > 0)
                 {
-                    display.transform.localScale = new Vector3(_sizeScale, _sizeScale, _sizeScale);
+                    //Zoom Out
+                    CameraController.instance.ZoomAction(false);
                 }
                 else
                 {
-                    display.transform.localScale = new Vector3(-_sizeScale, _sizeScale, _sizeScale);
+                    //Zoom In
+                    CameraController.instance.ZoomAction(true);
+                }
+            }
+
+            //Movement with mouse position
+
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = 10;
+
+            if ((Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
+                || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
+                && MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
+            {
+                _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                UpGradeStats();
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                DownGradeStats();
+            }
+
+            if (Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
+            || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+                Vector3 directionMovement = _positionOnMovement - transform.position;
+                if (directionMovement.x != 0)
+                {
+                    if (directionMovement.x < 0)
+                    {
+                        display.transform.localScale = new Vector3(1, 1, 1);
+                    }
+                    else
+                    {
+                        display.transform.localScale = new Vector3(-1, 1, 1);
+                    }
                 }
             }
         }
@@ -171,6 +176,11 @@ public class PlayerController : MonoBehaviour
     {
         return _rb.gravityScale;
     }
+    
+    public void SetInPause(bool value)
+    {
+        inPause = value;
+    }
 
     public void OnDrawGizmos()
     {
@@ -178,6 +188,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawSphere(transform.position, mouseDeadZoneRadius);
         Gizmos.DrawSphere(_positionOnMovement, 0.2f);
     }
+    
 }
 
 [System.Serializable]
