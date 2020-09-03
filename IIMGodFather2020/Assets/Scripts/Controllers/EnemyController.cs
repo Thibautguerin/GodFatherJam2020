@@ -80,6 +80,8 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         SpawnEnemy(2, _spawnFirePlacement);
         StartCoroutine(SpawnFire());
+        SoundEffectsController.instance.MakeFireOnSound();
+        SoundEffectsController.instance.MakeThunderSound();
     }
     private IEnumerator SpawnSpirit()
     {
@@ -87,6 +89,7 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         SpawnEnemy(0, _spawnSpiritsPlacement);
         StartCoroutine(SpawnSpirit());
+        SoundEffectsController.instance.MakeBadSpiritSpawnSound();
 
     }
     private IEnumerator SpawnLanderjack()
@@ -95,6 +98,7 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(timeToWait);
         SpawnEnemy(1, _spawnLaderjackPlacement);
         StartCoroutine(SpawnLanderjack());
+        SoundEffectsController.instance.MakeLumberjackSpawnSound();
 
     }
     public void SpawnEnemy(int index, GameObject[] placements)

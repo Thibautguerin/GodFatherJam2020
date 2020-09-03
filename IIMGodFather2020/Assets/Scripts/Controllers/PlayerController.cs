@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(BiggerAttack());
             ApplyStats();
             animator.SetTrigger("Growth");
+            SoundEffectsController.instance.MakeSpiritGrowthSound();
         }
     }
     public void DownGradeStats()
@@ -124,6 +125,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(AirAttack());
             ApplyStats();
             animator.SetTrigger("Narrowing");
+            SoundEffectsController.instance.MakeShockWaveSound();
         }
     }
     public void ApplyStats()
