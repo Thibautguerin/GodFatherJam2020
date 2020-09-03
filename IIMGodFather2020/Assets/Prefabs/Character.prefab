@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7806809887828677740}
   - component: {fileID: 7806809887828677743}
   - component: {fileID: 2137995067123867323}
+  - component: {fileID: 9018561080076901296}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -101,14 +102,16 @@ MonoBehaviour:
   display: {fileID: 7806809887828677738}
   speedMovement: 4
   changementStats:
-  - color: {r: 0.10734272, g: 1, b: 0, a: 1}
+  - trigger: Narrowing
     speedMovement: 2
     gravityStrength: 0
     zoomPower: 5
-  - color: {r: 1, g: 0.62671614, b: 0, a: 1}
+  - trigger: Growth
     speedMovement: 1
     gravityStrength: 1
     zoomPower: 15
+  timerBigAttack: 0.5
+  animator: {fileID: 9018561080076901296}
 --- !u!50 &7806809887828677743
 Rigidbody2D:
   serializedVersion: 4
@@ -146,6 +149,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0034935474, y: 0}
   m_Size: {x: 0.7294326, y: 2.16}
   m_Direction: 0
+--- !u!95 &9018561080076901296
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7806809887828677739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7d2c261332403ab4e8ae93e5dfc06554, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7806809889478039981
 GameObject:
   m_ObjectHideFlags: 0
