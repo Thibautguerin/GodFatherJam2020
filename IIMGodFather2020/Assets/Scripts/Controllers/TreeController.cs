@@ -18,26 +18,12 @@ public class TreeController : MonoBehaviour
 
         for (int i = 0; i < healthPoints.Length; i++)
         {
-            if (currentHealth >= 25 * (i + 1))
+            if (currentHealth >= maxTreeHealth / healthPoints.Length * (i + 1))
             {
                 healthPoints[i].SetActive(true);
             }
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            TakeDamage(25);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            RestoreLife(25);
-        }
-    }
-
 
     public void RestoreLife(int lifeUp)
     {
@@ -50,10 +36,9 @@ public class TreeController : MonoBehaviour
 
         for (int i = 0; i < healthPoints.Length; i++)
         {
-            if (currentHealth >= 25 * (i + 1))
+            if (currentHealth >= maxTreeHealth / healthPoints.Length * (i + 1))
             {
                 healthPoints[i].SetActive(true);
-
             }
             else
             {
@@ -69,21 +54,18 @@ public class TreeController : MonoBehaviour
 
         for (int i = 0; i < healthPoints.Length; i++)
         {
-            if (currentHealth >= 25 * (i+1))
+            if (currentHealth >= maxTreeHealth / healthPoints.Length * (i+1))
             {
                 healthPoints[i].SetActive(true);
 
             }else
             {
                 healthPoints[i].SetActive(false);
-            }
-            
-            
+            }    
         }
 
         if (currentHealth <= 0)
-        {
-            
+        {  
             Die();
         }
     }
