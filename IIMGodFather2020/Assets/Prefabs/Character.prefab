@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7806809887828677740}
   - component: {fileID: 7806809887828677743}
   - component: {fileID: 2137995067123867323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
     speedMovement: 1
     gravityStrength: 1
     zoomPower: 15
+  timerBigAttack: 0.5
 --- !u!50 &7806809887828677743
 Rigidbody2D:
   serializedVersion: 4
@@ -156,9 +157,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7806809889478039980}
   - component: {fileID: 7806809889478039983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
