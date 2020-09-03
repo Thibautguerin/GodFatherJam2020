@@ -20,6 +20,9 @@ public class SoundEffectsController : MonoBehaviour
     public AudioClip sapTreeHeal;
     public AudioClip defeat;
     public AudioClip victory;
+
+    public AudioSource sfx;
+
     private void Awake()
     {
         if (!instance)
@@ -32,6 +35,7 @@ public class SoundEffectsController : MonoBehaviour
         }
     }
 
+    #region SFX
     public void MakeLumberjackDeathSound()
     {
         MakeSound(lumberjackDeath);
@@ -94,7 +98,8 @@ public class SoundEffectsController : MonoBehaviour
 
     private void MakeSound(AudioClip originalClip)
     {
-        AudioSource.PlayClipAtPoint(originalClip, transform.position);
+        sfx.PlayOneShot(originalClip);
     }
+    #endregion
 
 }

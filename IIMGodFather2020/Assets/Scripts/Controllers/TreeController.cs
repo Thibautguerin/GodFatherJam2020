@@ -10,6 +10,7 @@ public class TreeController : MonoBehaviour
 
     public GameObject[] healthPoints;
 
+    public int limitDangerMusic = 15;
 
     private void Start()
     {
@@ -46,6 +47,10 @@ public class TreeController : MonoBehaviour
             }
 
         }
+        if (currentHealth > limitDangerMusic)
+        {
+            SoundManager.instance.PlayNormalMusic();
+        }
     }
     public void TakeDamage(int damage)
     {
@@ -67,6 +72,13 @@ public class TreeController : MonoBehaviour
         if (currentHealth <= 0)
         {  
             Die();
+        }
+        else
+        {
+            if (currentHealth < limitDangerMusic)
+            {
+                SoundManager.instance.PlayDangerMusic();
+            }
         }
     }
 
