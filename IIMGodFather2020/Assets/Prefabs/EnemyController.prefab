@@ -113,15 +113,9 @@ MonoBehaviour:
   - {fileID: 6026773439912185583, guid: 0d8839356a1a7a946995061c981832d8, type: 3}
   - {fileID: 2762229516786744841, guid: 7e6637e672129024cbb8cd4100752520, type: 3}
   - {fileID: 4237124057930275339, guid: 81c0fcd1da47e94468ddee3961c6f2bf, type: 3}
-  spawnLaderjackPlacement:
-  - {fileID: 962409620617939356}
-  - {fileID: 962409620830075198}
-  spawnSpiritsPlacement:
-  - {fileID: 962409620257017493}
-  - {fileID: 962409620490130869}
-  spawnFirePlacement:
-  - {fileID: 962409619052005634}
-  - {fileID: 962409620482577736}
+  spawnParentLaderjackPlacement: {fileID: 962409618870408297}
+  spawnParentSpiritsPlacement: {fileID: 962409620042881193}
+  spawnParentFirePlacement: {fileID: 962409620879246265}
   minTimeSpawn: 10
   maxTimeSpawn: 10
 --- !u!1 &962409620042881193

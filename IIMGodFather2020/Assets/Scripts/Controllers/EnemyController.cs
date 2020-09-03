@@ -62,20 +62,20 @@ public class EnemyController : MonoBehaviour
         switch (rand)
         {
             case 0:
-                SpawnEnemy(0);
+                SpawnEnemy(0, spawnSpiritsPlacement);
                 break;
             case 1:
-                SpawnEnemy(1);
+                SpawnEnemy(1, spawnLaderjackPlacement);
                 break;
             case 2:
-                SpawnEnemy(2);
+                SpawnEnemy(2, _spawnFirePlacement);
                 break;
         }
     }
-    public void SpawnEnemy(int index)
+    public void SpawnEnemy(int index, GameObject[] placements)
     {
         EnemyBehaviour enemy = Instantiate(enemyPrefabs[index]);
-        enemy.transform.position = GetRandomPlacement(spawnSpiritsPlacement).transform.position;
+        enemy.transform.position = GetRandomPlacement(placements).transform.position;
         enemy.Init();
     }
 
