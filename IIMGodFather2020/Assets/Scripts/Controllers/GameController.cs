@@ -38,11 +38,6 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Attack();
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(pausePanel.gameObject.activeInHierarchy == false)

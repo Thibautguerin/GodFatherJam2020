@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem shockwaveParticle;
     public ParticleSystem shockwaveInverseParticle;
+    public ParticleSystem shockFloorParticle;
+
+    private bool _canFall;
 
 
     private bool inPause = false;
@@ -84,10 +87,13 @@ public class PlayerController : MonoBehaviour
                 DownGradeStats();
             }
 
+            
+
             if (Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
             || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
             {
-                transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+                Vector3 movement = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+                transform.position = movement;
                 Vector3 directionMovement = _positionOnMovement - transform.position;
                 if (directionMovement.x != 0)
                 {
@@ -99,6 +105,10 @@ public class PlayerController : MonoBehaviour
                     {
                         display.transform.localScale = new Vector3(-_sizeScale, _sizeScale, _sizeScale);
                     }
+                }
+                if (transform.position.y > -8)
+                {
+                    _canFall = true;
                 }
             }
         }
@@ -194,7 +204,18 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawSphere(transform.position, mouseDeadZoneRadius);
         Gizmos.DrawSphere(_positionOnMovement, 0.2f);
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            if (_canFall)
+            {
+                _canFall = false;
+                shockFloorParticle.Play();
+            }
+        }
+    }
 }
 
 [System.Serializable]
