@@ -102,7 +102,6 @@ MonoBehaviour:
   speedMovement: 10
   attackRate: 1
   attackDommage: 1
-  animator: {fileID: 7429355063233586749}
 --- !u!58 &6026773439912185578
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +138,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6026773439912185576
 BoxCollider2D:
   m_ObjectHideFlags: 0
