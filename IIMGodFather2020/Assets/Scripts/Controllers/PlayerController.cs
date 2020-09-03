@@ -71,6 +71,18 @@ public class PlayerController : MonoBehaviour
             DownGradeStats();
         }
         transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+        Vector3 directionMovement = _positionOnMovement - transform.position;
+        if (directionMovement.x != 0)
+        {
+            if (directionMovement.x < 0)
+            {
+                display.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                display.transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }
     }
 
     public void UpGradeStats()
