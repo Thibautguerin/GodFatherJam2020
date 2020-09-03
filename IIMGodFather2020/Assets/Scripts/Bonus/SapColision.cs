@@ -15,7 +15,7 @@ public class SapColision : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        if (!isHit)
+        if (!isHit && other.tag == "Floor")
         {
             Vector3 pos = new Vector3(transform.position.x, other.GetComponent<Collider2D>().bounds.center.y + other.GetComponent<Collider2D>().bounds.size.y / 2 + Sap.GetComponent<SpriteRenderer>().bounds.size.y / 2, 0);
             Instantiate(Sap, pos,Sap.transform.rotation);
