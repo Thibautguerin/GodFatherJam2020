@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private bool _biggerAttack = false;
     public float timerBigAttack = 0.5f;
 
+    public Animator animator;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -69,6 +71,18 @@ public class PlayerController : MonoBehaviour
             DownGradeStats();
         }
         transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+        Vector3 directionMovement = _positionOnMovement - transform.position;
+        if (directionMovement.x != 0)
+        {
+            if (directionMovement.x < 0)
+            {
+                display.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                display.transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }
     }
 
     public void UpGradeStats()
@@ -82,11 +96,11 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(BiggerAttack());
             ApplyStats();
+            animator.SetTrigger("Growth");
         }
     }
     public void DownGradeStats()
     {
-        StartCoroutine(AirAttack());
         _currentStat--;
         if (_currentStat < 0)
         {
@@ -94,7 +108,9 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StartCoroutine(AirAttack());
             ApplyStats();
+            animator.SetTrigger("Narrowing");
         }
     }
     public void ApplyStats()
@@ -104,7 +120,7 @@ public class PlayerController : MonoBehaviour
         speedMovement = newStat.speedMovement;
         _rb.gravityScale = newStat.gravityStrength;
         CameraController.instance.ZoomAction(newStat.zoomPower);
-        display.color = newStat.color;
+        
     }
     
     public IEnumerator AirAttack()
@@ -148,7 +164,7 @@ public class PlayerController : MonoBehaviour
 [System.Serializable]
 public struct StatsPlayer
 {
-    public Color color;
+    public string trigger;
     public float speedMovement;
     public float gravityStrength;
     public float zoomPower;

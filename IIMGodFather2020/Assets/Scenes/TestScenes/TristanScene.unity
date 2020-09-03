@@ -226,6 +226,11 @@ MonoBehaviour:
   limitMaxZoom: 20
   viewportLimit: {x: 0.2, y: 0.2}
   speedTransitionMovement: 3
+  bounds:
+    top: 29.18
+    right: 25.37
+    bot: -29.3
+    left: -24.6
 --- !u!1 &182003079
 GameObject:
   m_ObjectHideFlags: 0
