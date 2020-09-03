@@ -58,10 +58,10 @@ public class PlayerController : MonoBehaviour
         //Movement with mouse position
         
          Vector3 mousePos = Input.mousePosition;
-         mousePos.z = Camera.main.nearClipPlane;
+         mousePos.z = 10;
 
-         if ((Mathf.Abs(Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position)) > mouseDeadZoneRadius
-            || Mathf.Abs(Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos))) > mouseDeadZoneRadius)
+         if ((Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
+            || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
             && MapController.instance.CheckPosition(Camera.main.ScreenToWorldPoint(mousePos), transform.position))
          {
             _positionOnMovement = Camera.main.ScreenToWorldPoint(mousePos);
@@ -76,8 +76,8 @@ public class PlayerController : MonoBehaviour
             DownGradeStats();
         }
 
-        if (Mathf.Abs(Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position)) > mouseDeadZoneRadius
-            || Mathf.Abs(Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos))) > mouseDeadZoneRadius)
+        if (Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
+            || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
         {
             transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
             Vector3 directionMovement = _positionOnMovement - transform.position;
@@ -170,6 +170,13 @@ public class PlayerController : MonoBehaviour
     public float GetGravity()
     {
         return _rb.gravityScale;
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(transform.position, mouseDeadZoneRadius);
+        Gizmos.DrawSphere(_positionOnMovement, 0.2f);
     }
 }
 
