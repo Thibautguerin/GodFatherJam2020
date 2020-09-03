@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: cbf100e87bf83c648bdcb2340b598b3a
+guid: 0e2e4a899ab7b9546bb4507751c169fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7257088953700684558
-    second: Idle_face_Perso_0
+      213: 7172841541862697765
+    second: Animation_retrecissement_0
   - first:
-      213: 1040620275065903811
-    second: Idle_face_Perso_1
+      213: 622798890977220789
+    second: Animation_retrecissement_1
   - first:
-      213: -6731452816529016683
-    second: Idle_face_Perso_2
+      213: -2162324747524292400
+    second: Animation_retrecissement_2
   - first:
-      213: -8211000191334930912
-    second: Idle_face_Perso_3
+      213: 7221795991670075073
+    second: Animation_retrecissement_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_face_Perso_0
+      name: Animation_retrecissement_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 120
-        height: 252
+        width: 234
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fc624bdb04a94b90800000000000000
-      internalID: -7257088953700684558
+      spriteID: 52b24e4016d0b8360800000000000000
+      internalID: 7172841541862697765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_face_Perso_1
+      name: Animation_retrecissement_1
       rect:
         serializedVersion: 2
-        x: 120
+        x: 234
         y: 0
-        width: 120
-        height: 252
+        width: 234
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ca5f5170a6017e00800000000000000
-      internalID: 1040620275065903811
+      spriteID: 5b85437aa40a4a800800000000000000
+      internalID: 622798890977220789
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_face_Perso_2
+      name: Animation_retrecissement_2
       rect:
         serializedVersion: 2
-        x: 240
+        x: 468
         y: 0
-        width: 120
-        height: 252
+        width: 234
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5983c7004531592a0800000000000000
-      internalID: -6731452816529016683
+      spriteID: 0d047ce3911edf1e0800000000000000
+      internalID: -2162324747524292400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_face_Perso_3
+      name: Animation_retrecissement_3
       rect:
         serializedVersion: 2
-        x: 360
+        x: 702
         y: 0
-        width: 120
-        height: 252
+        width: 234
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02621d864daac0e80800000000000000
-      internalID: -8211000191334930912
+      spriteID: 1cea5d31139f83460800000000000000
+      internalID: 7221795991670075073
       vertices: []
       indices: 
       edges: []
