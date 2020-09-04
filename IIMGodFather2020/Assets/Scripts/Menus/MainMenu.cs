@@ -13,8 +13,12 @@ public class MainMenu : MonoBehaviour
     [Header("Menu")]
     public string nameLevel;
 
+    public Texture2D cursorTexture = null;
+    public CursorMode cursorMode = CursorMode.Auto;
+
     private void Start()
     {
+        Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
         TransitionController.instance?.FadeOut();
         Time.timeScale = 1;
     }
