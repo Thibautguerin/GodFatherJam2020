@@ -5202,6 +5202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca36343a36a8134d9e287a5fdf78775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &489694540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962758170880719516, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+  m_PrefabInstance: {fileID: 7773492280685613139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &521309684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6581,9 +6586,33 @@ PrefabInstance:
       propertyPath: m_text
       value: Coeur ebene
       objectReference: {fileID: 0}
+    - target: {fileID: 1890505497900449734, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890505497900449734, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7773492280685613140}
+    - target: {fileID: 1890505497900449734, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 489694540}
+    - target: {fileID: 1890505497900449734, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890505497900449734, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1962758170880719516, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2611873729722780542, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3349898043444175350, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_AnchorMin.y
