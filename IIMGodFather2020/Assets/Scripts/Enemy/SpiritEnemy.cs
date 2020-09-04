@@ -54,6 +54,13 @@ public class SpiritEnemy : EnemyBehaviour
             _isAttack = true;
             Attack();
         }
+        if (collision.gameObject.tag == "Attack")
+        {
+            if (GameController.instance.player.GetBiggerAttack())
+            {
+                Die(GameController.instance.player, false);
+            }
+        }
     }
 
     public override void Attack()

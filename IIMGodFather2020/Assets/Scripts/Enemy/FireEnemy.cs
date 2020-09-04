@@ -55,7 +55,10 @@ public class FireEnemy : EnemyBehaviour
     {
         if (collision.tag == "Attack")
         {
-            Die(GameController.instance.player, true);
+            if (GameController.instance.player.GetAirAttack())
+            {
+                Die(GameController.instance.player, true);
+            }
         }
     }
 }

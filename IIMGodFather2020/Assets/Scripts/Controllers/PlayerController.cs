@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private CircleCollider2D _areaAirAttack = null;
 
     private bool _biggerAttack = false;
+    private bool _airAttack = false;
+
     public float timerBigAttack = 0.5f;
 
     public Animator animator;
@@ -123,6 +125,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StopCoroutine(BiggerAttack());
+            StopCoroutine(AirAttack());
+            _areaAirAttack.enabled = false;
+
+
             StartCoroutine(BiggerAttack());
             ApplyStats();
             animator.SetTrigger("Growth");
@@ -138,6 +145,13 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StopCoroutine(BiggerAttack());
+            StopCoroutine(AirAttack());
+            _areaAirAttack.enabled = false;
+            _airAttack = false;
+            _biggerAttack = false;
+
+
             StartCoroutine(AirAttack());
             ApplyStats();
             animator.SetTrigger("Narrowing");
@@ -158,21 +172,30 @@ public class PlayerController : MonoBehaviour
     {
         _areaAirAttack.enabled = true;
         shockwaveParticle.Play();
+        _airAttack = true;
         yield return new WaitForSeconds(0.3f);
         _areaAirAttack.enabled = false;
+        _airAttack = false;
     }
 
     public IEnumerator BiggerAttack()
     {
         _biggerAttack = true;
+        _areaAirAttack.enabled = true;
+
         shockwaveInverseParticle.Play();
         yield return new WaitForSeconds(timerBigAttack);
+        _areaAirAttack.enabled = false;
         _biggerAttack = false;
     }
 
     public bool GetBiggerAttack()
     {
         return _biggerAttack;
+    }
+    public bool GetAirAttack()
+    {
+        return _airAttack;
     }
     /// <summary>
     /// Return the end position of movement
