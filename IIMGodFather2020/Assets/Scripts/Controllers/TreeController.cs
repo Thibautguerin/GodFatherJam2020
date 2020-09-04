@@ -85,6 +85,5 @@ public class TreeController : MonoBehaviour
     public void Die()
     {
         GameController.instance.Defeat();
-        Destroy(gameObject);
     }
 }
