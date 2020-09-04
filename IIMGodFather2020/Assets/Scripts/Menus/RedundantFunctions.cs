@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class RedundantFunctions : MonoBehaviour
 {
@@ -18,6 +19,6 @@ public class RedundantFunctions : MonoBehaviour
     public void RetryGame()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+        TransitionController.instance?.FadeIn(()=> SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex)); 
     }
 }

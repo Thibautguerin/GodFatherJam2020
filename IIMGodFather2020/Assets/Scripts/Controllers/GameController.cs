@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
         isPlaying = true;
+        TransitionController.instance?.FadeOut();
     }
 
     private void Update()
