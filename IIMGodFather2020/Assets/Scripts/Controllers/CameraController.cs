@@ -60,7 +60,14 @@ public class CameraController : MonoBehaviour
             {
                 if (GameController.instance.player.GetVelocity() != Vector2.zero)
                 {
-                    _currentSpeedTransitionMovement = GameController.instance.player.GetVelocity().magnitude;
+                    if (GameController.instance.player.GetVelocity().magnitude < 3)
+                    {
+                        _currentSpeedTransitionMovement = 0;
+                    }
+                    else
+                    {
+                        _currentSpeedTransitionMovement = GameController.instance.player.GetVelocity().magnitude;
+                    }
                 }
                 else
                 {
@@ -83,7 +90,14 @@ public class CameraController : MonoBehaviour
             {
                 if (GameController.instance.player.GetVelocity() != Vector2.zero)
                 {
-                    _currentSpeedTransitionMovement = GameController.instance.player.GetVelocity().magnitude;
+                    if (GameController.instance.player.GetVelocity().magnitude < 3)
+                    {
+                        _currentSpeedTransitionMovement = 0;
+                    }
+                    else
+                    {
+                        _currentSpeedTransitionMovement = GameController.instance.player.GetVelocity().magnitude;
+                    }
                 }
                 else
                 {
