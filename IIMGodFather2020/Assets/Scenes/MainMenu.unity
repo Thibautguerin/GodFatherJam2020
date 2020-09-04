@@ -6669,6 +6669,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773492281824194004, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773492281824194004, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 791.5315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773492281824194004, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 141.0615
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773492281824194004, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773492281824194011, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: m_Text
+      value: "Coeur d'Eb\xE8ne"
+      objectReference: {fileID: 0}
     - target: {fileID: 7773492281830382752, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
