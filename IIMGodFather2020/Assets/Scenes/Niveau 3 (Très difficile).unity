@@ -6288,6 +6288,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapController
       objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[0].x
+      value: -12.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[0].y
+      value: -11.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[1].x
+      value: -12.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[1].y
+      value: 9.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[3].x
+      value: 12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[3].y
+      value: -11.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[2].x
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7108427592155627677, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
+      propertyPath: points.Array.data[2].y
+      value: 9.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7108427592155627679, guid: 61bd3bc3438471f439bbd8085ebd63d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.270792
