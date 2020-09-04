@@ -116,8 +116,12 @@ MonoBehaviour:
   spawnParentLaderjackPlacement: {fileID: 962409618870408297}
   spawnParentSpiritsPlacement: {fileID: 962409620042881193}
   spawnParentFirePlacement: {fileID: 962409620879246265}
-  minTimeSpawn: 10
-  maxTimeSpawn: 10
+  minFireTimeSpawn: 10
+  maxFireTimeSpawn: 70
+  minSpiritTimeSpawn: 10
+  maxSpiritTimeSpawn: 70
+  minLumberjackTimeSpawn: 10
+  maxLumberjackTimeSpawn: 70
 --- !u!1 &962409620042881193
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962409620617939356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.2, y: -18.6, z: 0}
+  m_LocalPosition: {x: 16.02, y: -3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 962409618870408296}
@@ -294,7 +298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962409620830075198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.8, y: -18.6, z: 0}
+  m_LocalPosition: {x: -14.51, y: -3.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 962409618870408296}

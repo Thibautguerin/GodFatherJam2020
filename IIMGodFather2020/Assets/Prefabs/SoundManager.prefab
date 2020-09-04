@@ -51,7 +51,7 @@ MonoBehaviour:
   menuClip: {fileID: 8300000, guid: 34b52793043cb6a4f80b7b4c371be413, type: 3}
   musicIG: {fileID: 8300000, guid: 5d130bde43c41634abdfe41328e41254, type: 3}
   musicHardIG: {fileID: 8300000, guid: 1d3bfc62bde2b8b469397713afcce210, type: 3}
-  volume: 0.5
+  volume: 0.1
 --- !u!82 &5011753218600793265
 AudioSource:
   m_ObjectHideFlags: 0

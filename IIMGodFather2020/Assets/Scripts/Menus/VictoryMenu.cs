@@ -14,7 +14,7 @@ public class VictoryMenu : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("Niveau suivant !");
-        SceneManager.LoadScene(nextLevel);
+        TransitionController.instance?.FadeIn(()=> SceneManager.LoadScene(nextLevel));
     }
 
     

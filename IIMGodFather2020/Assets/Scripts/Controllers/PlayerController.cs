@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private CircleCollider2D _areaAirAttack = null;
 
     private bool _biggerAttack = false;
+    private bool _airAttack = false;
+
     public float timerBigAttack = 0.5f;
 
     public Animator animator;
@@ -23,6 +25,9 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem shockwaveParticle;
     public ParticleSystem shockwaveInverseParticle;
+    public ParticleSystem shockFloorParticle;
+
+    private bool _canFall;
 
 
     private bool inPause = false;
@@ -84,10 +89,13 @@ public class PlayerController : MonoBehaviour
                 DownGradeStats();
             }
 
+            
+
             if (Vector2.Distance(Camera.main.ScreenToWorldPoint(mousePos), transform.position) > mouseDeadZoneRadius
             || Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(mousePos)) > mouseDeadZoneRadius)
             {
-                transform.position = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+                Vector3 movement = Vector2.MoveTowards(transform.position, _positionOnMovement, speedMovement * Time.deltaTime);
+                transform.position = movement;
                 Vector3 directionMovement = _positionOnMovement - transform.position;
                 if (directionMovement.x != 0)
                 {
@@ -99,6 +107,10 @@ public class PlayerController : MonoBehaviour
                     {
                         display.transform.localScale = new Vector3(-_sizeScale, _sizeScale, _sizeScale);
                     }
+                }
+                if (transform.position.y > -8)
+                {
+                    _canFall = true;
                 }
             }
         }
@@ -113,6 +125,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StopCoroutine(BiggerAttack());
+            StopCoroutine(AirAttack());
+            _areaAirAttack.enabled = false;
+
+
             StartCoroutine(BiggerAttack());
             ApplyStats();
             animator.SetTrigger("Growth");
@@ -128,6 +145,13 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            StopCoroutine(BiggerAttack());
+            StopCoroutine(AirAttack());
+            _areaAirAttack.enabled = false;
+            _airAttack = false;
+            _biggerAttack = false;
+
+
             StartCoroutine(AirAttack());
             ApplyStats();
             animator.SetTrigger("Narrowing");
@@ -148,21 +172,30 @@ public class PlayerController : MonoBehaviour
     {
         _areaAirAttack.enabled = true;
         shockwaveParticle.Play();
+        _airAttack = true;
         yield return new WaitForSeconds(0.3f);
         _areaAirAttack.enabled = false;
+        _airAttack = false;
     }
 
     public IEnumerator BiggerAttack()
     {
         _biggerAttack = true;
+        _areaAirAttack.enabled = true;
+
         shockwaveInverseParticle.Play();
         yield return new WaitForSeconds(timerBigAttack);
+        _areaAirAttack.enabled = false;
         _biggerAttack = false;
     }
 
     public bool GetBiggerAttack()
     {
         return _biggerAttack;
+    }
+    public bool GetAirAttack()
+    {
+        return _airAttack;
     }
     /// <summary>
     /// Return the end position of movement
@@ -194,7 +227,18 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawSphere(transform.position, mouseDeadZoneRadius);
         Gizmos.DrawSphere(_positionOnMovement, 0.2f);
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Floor" && _rb.gravityScale > 0)
+        {
+            if (_canFall)
+            {
+                _canFall = false;
+                shockFloorParticle.Play();
+            }
+        }
+    }
 }
 
 [System.Serializable]

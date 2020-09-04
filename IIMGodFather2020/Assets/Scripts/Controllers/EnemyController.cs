@@ -17,14 +17,17 @@ public class EnemyController : MonoBehaviour
     private GameObject[] _spawnFirePlacement;
 
     [Header("Fire Spawn")]
+    public bool spawnFire = true;
     public float minFireTimeSpawn = 10;
     public float maxFireTimeSpawn = 70;
 
     [Header("Spirit Spawn")]
+    public bool spawnSpirit = true;
     public float minSpiritTimeSpawn = 10;
     public float maxSpiritTimeSpawn = 70;
 
     [Header("Lumberjack Spawn")]
+    public bool spawnLumberjack = true;
     public float minLumberjackTimeSpawn = 10;
     public float maxLumberjackTimeSpawn = 70;
 
@@ -47,9 +50,18 @@ public class EnemyController : MonoBehaviour
             _spawnFirePlacement[i] = spawnParentFirePlacement.transform.GetChild(i).gameObject;
         }
 
-        StartCoroutine(SpawnFire());
-        StartCoroutine(SpawnSpirit());
-        StartCoroutine(SpawnLanderjack());
+        if (spawnFire)
+        {
+            StartCoroutine(SpawnFire());
+        }
+        if (spawnSpirit)
+        {
+            StartCoroutine(SpawnSpirit());
+        }
+        if (spawnLumberjack)
+        {
+            StartCoroutine(SpawnLanderjack());
+        }
     }
 
     public void Stop()
