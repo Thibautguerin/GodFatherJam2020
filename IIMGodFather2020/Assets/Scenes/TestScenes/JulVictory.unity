@@ -198,7 +198,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -378,6 +378,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 675214542}
     m_Modifications:
+    - target: {fileID: 182454451035564000, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: m_text
+      value: 'Congratulations
+
+        The ebony heart will live on'
+      objectReference: {fileID: 0}
     - target: {fileID: 283764252441118168, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -545,6 +551,22 @@ PrefabInstance:
     - target: {fileID: 1408221188973031563, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938919242986884154, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938919242986884154, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5549594568472937566, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5549594568472937566, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6442461856409754235, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
       propertyPath: m_Name
