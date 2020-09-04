@@ -28,7 +28,6 @@ public class TransitionController : MonoBehaviour
 
     public void FadeOut(Action callback = null)
     {
-        Debug.Log("Fade out");
         transitionImage.DOFade(0, timeToTransition / 2).SetUpdate(true).OnComplete(() => callback?.Invoke());
     }
 }
