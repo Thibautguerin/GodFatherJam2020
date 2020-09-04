@@ -15,6 +15,7 @@ public class Credit : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         TransitionController.instance.FadeOut();
     }
     private void Update()
