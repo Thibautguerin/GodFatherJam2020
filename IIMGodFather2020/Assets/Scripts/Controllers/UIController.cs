@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
 {
     public static UIController instance;
     public TextMeshProUGUI timerText;
+    public string timerSentence;
 
     private void Awake()
     {
@@ -23,6 +24,6 @@ public class UIController : MonoBehaviour
     public void Timer(float timer)
     {
 
-        timerText.text = timer.ToString();
+        timerText.text = timerSentence+" "+timer.ToString();
     }
 }
