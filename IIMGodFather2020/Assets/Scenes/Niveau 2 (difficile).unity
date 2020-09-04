@@ -6800,11 +6800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 962409619271082006, guid: a125cc10c1a84f4428d152f70b83e902, type: 3}
       propertyPath: minSpiritTimeSpawn
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 962409619271082006, guid: a125cc10c1a84f4428d152f70b83e902, type: 3}
       propertyPath: maxSpiritTimeSpawn
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 962409619271082006, guid: a125cc10c1a84f4428d152f70b83e902, type: 3}
       propertyPath: minLumberjackTimeSpawn
