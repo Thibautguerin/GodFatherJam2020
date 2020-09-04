@@ -16,9 +16,13 @@ public class MainMenu : MonoBehaviour
     public Texture2D cursorTexture = null;
     public CursorMode cursorMode = CursorMode.Auto;
 
-    private void Start()
+    private void Awake()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, cursorMode);
+    }
+
+    private void Start()
+    {
         TransitionController.instance?.FadeOut();
         Time.timeScale = 1;
     }
