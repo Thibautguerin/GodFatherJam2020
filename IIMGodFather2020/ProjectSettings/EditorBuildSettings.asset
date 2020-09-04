@@ -16,5 +16,8 @@ EditorBuildSettings:
     guid: 56eeabfa989a942458bfd1e4a61d7bd0
   - enabled: 1
     path: Assets/Scenes/Niveau 2 (difficile).unity
+    guid: d3aa3793231c40d46af60581d6086457
+  - enabled: 1
+    path: "Assets/Scenes/Niveau 3 (Tr\xE8s difficile).unity"
     guid: cb02eeff6679ed94e8c2ca3572f9c8f4
   m_configObjects: {}
