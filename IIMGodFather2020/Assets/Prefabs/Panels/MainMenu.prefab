@@ -970,7 +970,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NARROWING to blow out fires
+  m_text: Release air to blow out fires
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88bd656a95470874f8a75919c61b5c21, type: 2}
   m_sharedMaterial: {fileID: -5176550655346322218, guid: 88bd656a95470874f8a75919c61b5c21, type: 2}
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GROWTH to destroy spirits and flatten lumberjacks
+  m_text: Grow to destroy spirits and flatten lumberjacks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88bd656a95470874f8a75919c61b5c21, type: 2}
   m_sharedMaterial: {fileID: -5176550655346322218, guid: 88bd656a95470874f8a75919c61b5c21, type: 2}
