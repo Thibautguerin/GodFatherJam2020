@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulation, the ebony tree is safe now
+  m_text: Congratulation, the ebony tree is safe for now
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88bd656a95470874f8a75919c61b5c21, type: 2}
   m_sharedMaterial: {fileID: -5176550655346322218, guid: 88bd656a95470874f8a75919c61b5c21, type: 2}
