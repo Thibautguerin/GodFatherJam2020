@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor" && _rb.gravityScale > 0)
         {
             if (_canFall)
             {
