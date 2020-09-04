@@ -5884,6 +5884,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6536781166707350173, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: nextLevel
+      value: "Niveau 3 (Tr\xE8s difficile)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047940099249419218, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
+      propertyPath: returnMainMenu
+      value: MainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b961c66be930fc489e842b44e48dc93, type: 3}
 --- !u!224 &735793047 stripped
@@ -6161,7 +6169,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 35.1
+  m_Intensity: 20
   m_Range: 10
   m_SpotAngle: 163
   m_InnerSpotAngle: 1
