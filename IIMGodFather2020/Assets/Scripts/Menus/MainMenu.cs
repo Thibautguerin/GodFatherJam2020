@@ -12,9 +12,13 @@ public class MainMenu : MonoBehaviour
 
     [Header("Menu")]
     public string nameLevel;
-    
-    
-    
+
+    private void Start()
+    {
+        TransitionController.instance?.FadeOut();
+        Time.timeScale = 1;
+    }
+
     public void SetMenuVolume(float volume)
     {
         audioMixer.SetFloat("MainMenuVolume", volume);
@@ -24,7 +28,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Play !");
         Time.timeScale = 1;
-        SceneManager.LoadScene(nameLevel);
+        TransitionController.instance?.FadeIn(()=> SceneManager.LoadScene(nameLevel));
     }
 
     public void QuitGame()
