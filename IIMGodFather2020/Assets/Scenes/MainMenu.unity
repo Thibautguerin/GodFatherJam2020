@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: nameLevel
       value: MainScene
       objectReference: {fileID: 0}
+    - target: {fileID: 7773492281269716017, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 75f3ec0997c7f6e44accaf6b7f8bf54f, type: 3}
     - target: {fileID: 7773492281269716019, guid: 16d490a63bcd28b459b9c922af5e313e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
