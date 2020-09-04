@@ -6890,10 +6890,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5011753218600793264, guid: 7fc1ac2e291ef2a4b9bd14fda9733f0a, type: 3}
-      propertyPath: volume
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5011753218600793267, guid: 7fc1ac2e291ef2a4b9bd14fda9733f0a, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -6911,14 +6907,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 265994853872707061, guid: 7a89318d064131b448ec39c2532271d0, type: 3}
-      propertyPath: m_Volume
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 265994853872707061, guid: 7a89318d064131b448ec39c2532271d0, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: 5b23a4aca4f1130439394d7beddbf0d4, type: 2}
     - target: {fileID: 8829798213137228527, guid: 7a89318d064131b448ec39c2532271d0, type: 3}
       propertyPath: m_Name
       value: SoundController
