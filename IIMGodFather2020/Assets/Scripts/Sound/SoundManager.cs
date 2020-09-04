@@ -11,6 +11,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip menuClip;
     public AudioClip musicIG;
     public AudioClip musicHardIG;
+    public AudioClip musicCredit;
 
     public float volume = 0.5f;
     private int _currentAudio;
@@ -86,5 +87,10 @@ public class SoundManager : MonoBehaviour
     public void PlayNormalMusic()
     {
         PlayMusic(musicIG);
+    }
+
+    public void PlayCreditMusic()
+    {
+        PlayMusic(musicCredit);
     }
 }
